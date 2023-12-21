@@ -21,27 +21,27 @@ const menuConfig = [
   },
   {
     title: 'Sobre mí',
-    icon: <Iconify icon={'eva:home-fill'} {...ICON_SIZE} />,
+    icon: <Iconify icon={'mdi:about'} {...ICON_SIZE} />,
     path: PATH_MENU.aboutMe,
   },
   {
     title: 'Portafolio',
-    icon: <Iconify icon={'eva:home-fill'} {...ICON_SIZE} />,
+    icon: <Iconify icon={'zondicons:portfolio'} {...ICON_SIZE} />,
     path: PATH_MENU.portfolio,
   }, 
   {
     title: 'Reconocimientos',
-    icon: <Iconify icon={'eva:home-fill'} {...ICON_SIZE} />,
+    icon: <Iconify icon={'solar:diploma-bold'} {...ICON_SIZE} />,
     path: PATH_MENU.recognitions,
   }, 
   {
     title: 'Contacto',
-    icon: <Iconify icon={'eva:home-fill'} {...ICON_SIZE} />,
+    icon: <Iconify icon={'bxs:contact'} {...ICON_SIZE} />,
     path: PATH_MENU.contact,
   },
    {
     title: 'Mí blog',
-    icon: <Iconify icon={'eva:home-fill'} {...ICON_SIZE} />,
+    icon: <Iconify icon={'mdi:blog'} {...ICON_SIZE} />,
     path: PATH_MENU.myBlog,
   },
   // {

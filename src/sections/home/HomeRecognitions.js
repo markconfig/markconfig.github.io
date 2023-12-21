@@ -24,7 +24,6 @@ const CARDS = [
       { name: 'FarmaReyes page', url: 'https://www.farmareyes.com/' },
       { name: 'App Farmareyes', url: 'https://app.farmareyes.com/' }
     ],
-    technologies: { mysql: true, springboot: true, next: true, javascript: true, react: true },
   },
   {
     id: 1,
@@ -32,7 +31,6 @@ const CARDS = [
     srcPdf: '/assets/download/reconocimientos/JuegaAprende160421.pdf',
     title: 'Juega y aprende salvar vidas',
     description: 'Constancia por participación como Fearless Driver del proyecto "Juega y aprende a salvar vidas"',
-    technologies: { java: true, arduino: true },
   },
   {
     id: 2,
@@ -40,7 +38,6 @@ const CARDS = [
     srcPdf: '/assets/download/reconocimientos/Ingles261120.pdf',
     title: 'Ways to learn and measure my level lof competence in a second language',
     description: 'Constancia por participar en el taller:"Ways to learn and measure my level lof competence in a second language"',
-    technologies: { java: true, arduino: true, mysql: true },
   },
   {
     id: 3,
@@ -48,7 +45,6 @@ const CARDS = [
     srcPdf: '/assets/download/reconocimientos/ReallyInovacion021020.pdf',
     title: 'Really Latinoamericano de Innovación 2020',
     description: 'Constancia por participar en el Really Latinoamericano de Innovación 2020',
-    technologies: { java: true, arduino: true },
   },
   {
     id: 4,
@@ -56,7 +52,6 @@ const CARDS = [
     srcPdf: '/assets/download/reconocimientos/Arduino241018.pdf',
     title: 'Programación de intefaces y domótica con arduino',
     description: 'Reconocimiento por haber particiado en el taller "Programación de intefaces y domótica con arduino"',
-    technologies: { java: true, arduino: true },
   },
   {
     id: 5,
@@ -64,7 +59,6 @@ const CARDS = [
     srcPdf: '/assets/download/reconocimientos/Mantenimiento081117.pdf',
     title: 'Mantenimiento preventivo y correctivo de telefonía celuar',
     description: 'Reconocimiento por haber particiado en el taller "Mantenimiento preventivo y correctivo de telefonía celuar"',
-    technologies: { java: true, arduino: true },
   },
 
 ];
@@ -222,7 +216,6 @@ export default function HomeRecognitions() {
                     )
                   })
                 } */}
-                <TechnologiesIcon initialColor={false} simple={true} visibleTechnologies={card.technologies} />
                 <Button variant="text" color="primary" onClick={() => handleOpenCardDetails(card)}>
                   Ver en pdf
                 </Button>

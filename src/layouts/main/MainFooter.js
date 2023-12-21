@@ -44,7 +44,7 @@ const LINKS = [
   {
     headline: 'Enlaces',
     children: [
-      { name: 'Github', href: PATH_SOCIAL_NETWORK.github },
+      // { name: 'Github', href: PATH_SOCIAL_NETWORK.github },
       { name: 'Gitlab', href: PATH_SOCIAL_NETWORK.gitlab },
       { name: 'Threads', href: PATH_SOCIAL_NETWORK.threads },
       { name: 'YouTube', href: PATH_SOCIAL_NETWORK.youtube },

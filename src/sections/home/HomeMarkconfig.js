@@ -120,7 +120,7 @@ export default function HomeMarkconfig() {
               <Typography
               // sx={{ color: 'text.white' }}
               >
-                Frontend, Backend, Java, Spring Boot, React, NextJs, Javascript
+                Java, Spring Boot, React, NextJs, Javascript, MySQL, Arduino
               </Typography>
             </m.div>
 

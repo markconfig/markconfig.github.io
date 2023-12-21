@@ -32,7 +32,7 @@ export default class MyDocument extends Document {
           <meta property="og:image" content={`${HOST_NAME}/logo/markconfig.png`} />
           <meta property="og:description" content="Sitio web, portafolio, contacto y blog de Markconfig" />
           <meta property='og:type' content='website' />
-          <meta property='og:title' content='Markconfig - Desarrollador de software, frontend, backend, java, react, javascript' />
+          <meta property='og:title' content='Markconfig - Desarrollador de software, Java, Spring Boot, React, NextJs, Javascript, MySQL, Arduino' />
           <meta property='og:site_name' content='Markconfig' />
           <meta property='og:url' content={`${HOST_NAME}/`} />
           <meta property='og:image:alt' content='Logotipo Markconfig' />
@@ -51,7 +51,7 @@ export default class MyDocument extends Document {
           <meta name='twitter:card' content='summary' />
           <meta name='twitter:url' content={`${HOST_NAME}/`} />
           <meta name='twitter:title'
-            content='Markconfig - Desarrollador de software, frontend, backend, java, react, javascript' />
+            content='Markconfig - Desarrollador de software, Java, Spring Boot, React, NextJs, Javascript, MySQL, Arduino' />
           <meta name='twitter:description' content='Sitio web, portafolio, contacto y blog de Markconfig' />
           <meta name='twitter:creator' content='@Markconfig' />
           {/*         En esta etiqueta se tiene que editar la url de la imagen haciendoa coincidir con el host*/}

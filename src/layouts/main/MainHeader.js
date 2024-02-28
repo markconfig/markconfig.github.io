@@ -17,8 +17,6 @@ import Label from '../../components/Label';
 import MenuDesktop from './MenuDesktop';
 import MenuMobile from './MenuMobile';
 import navConfig from './MenuConfig';
-
-import SimpleSettings from '../../components/settings/SimpleSettings';
 // ----------------------------------------------------------------------
 
 const ToolbarStyle = styled(Toolbar)(({ theme }) => ({
@@ -94,8 +92,6 @@ export default function MainHeader() {
           >
             Purchase Now
           </Button> */}
-
-          <SimpleSettings />
 
           {!isDesktop && <MenuMobile isOffset={isOffset} isHome={isHome} navConfig={navConfig} />}
         </Container>

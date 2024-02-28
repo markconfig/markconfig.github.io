@@ -15,7 +15,7 @@ import TechnologiesIcon from '../../components/TechnologiesIcon';
 const CARDS = [
   {
     id: 0,
-    icon: '/images/reconocimientos/09BC238D-C485-4193-8390-E0AD008F84C2.png',
+    icon: '/images/reconocimientos/09BC238D-C485-4193-8390-E0AD008F84C2.webp',
     srcPdf: '/assets/download/reconocimientos/09BC238D-C485-4193-8390-E0AD008F84C2.pdf',
     title: 'Título profesional',
     description:
@@ -27,35 +27,35 @@ const CARDS = [
   },
   {
     id: 1,
-    icon: '/images/reconocimientos/JuegaAprende160421.png',
+    icon: '/images/reconocimientos/JuegaAprende160421.webp',
     srcPdf: '/assets/download/reconocimientos/JuegaAprende160421.pdf',
     title: 'Juega y aprende salvar vidas',
     description: 'Constancia por participación como Fearless Driver del proyecto "Juega y aprende a salvar vidas"',
   },
   {
     id: 2,
-    icon: '/images/reconocimientos/Ingles261120.png',
+    icon: '/images/reconocimientos/Ingles261120.webp',
     srcPdf: '/assets/download/reconocimientos/Ingles261120.pdf',
     title: 'Ways to learn and measure my level lof competence in a second language',
     description: 'Constancia por participar en el taller:"Ways to learn and measure my level lof competence in a second language"',
   },
   {
     id: 3,
-    icon: '/images/reconocimientos/ReallyInovacion021020.png',
+    icon: '/images/reconocimientos/ReallyInovacion021020.webp',
     srcPdf: '/assets/download/reconocimientos/ReallyInovacion021020.pdf',
     title: 'Really Latinoamericano de Innovación 2020',
     description: 'Constancia por participar en el Really Latinoamericano de Innovación 2020',
   },
   {
     id: 4,
-    icon: '/images/reconocimientos/Arduino241018.png',
+    icon: '/images/reconocimientos/Arduino241018.webp',
     srcPdf: '/assets/download/reconocimientos/Arduino241018.pdf',
     title: 'Programación de intefaces y domótica con arduino',
     description: 'Reconocimiento por haber particiado en el taller "Programación de intefaces y domótica con arduino"',
   },
   {
     id: 5,
-    icon: '/images/reconocimientos/Mantenimiento081117.png',
+    icon: '/images/reconocimientos/Mantenimiento081117.webp',
     srcPdf: '/assets/download/reconocimientos/Mantenimiento081117.pdf',
     title: 'Mantenimiento preventivo y correctivo de telefonía celuar',
     description: 'Reconocimiento por haber particiado en el taller "Mantenimiento preventivo y correctivo de telefonía celuar"',

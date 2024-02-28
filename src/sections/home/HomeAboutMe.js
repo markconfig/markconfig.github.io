@@ -203,8 +203,8 @@ export default function HomeAboutMe() {
               >
                 <Image
                   disabledEffect
-                  alt={`screen markconfig`}
-                  src={`/images/markconfig.jpg`}
+                  alt={`Markconfig picture`}
+                  src={`/images/markconfig.webp`}
                 />
               </ScreenStyle>
             </Box>

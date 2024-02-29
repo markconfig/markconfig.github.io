@@ -12,7 +12,7 @@ module.exports = withTM({
   swcMinify: false,
   trailingSlash: true,
   env: {
-    HOST_NAME: 'https://markconfig.github.com',
+    HOST_NAME: 'https://markconfig.github.io',
     HOST_API_KEY: 'https://minimal-assets-api.vercel.app',
     // FIREBASE AUTH
     FIREBASE_API_KEY: '',

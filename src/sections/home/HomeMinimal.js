@@ -21,7 +21,7 @@ const CARDS = [
     description: 'Easy to customize and extend each component, saving you time and money.',
   },
   {
-    icon: '/logo/logo_single.svg',
+    icon: '/logo/markconfigIcon.svg',
     title: 'Branding',
     description: 'Consistent design in colors, fonts ... makes brand recognition easy.',
   },

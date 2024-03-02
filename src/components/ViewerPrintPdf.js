@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 // form
 // @mui
 import { LoadingButton } from '@mui/lab';
-import { Box, Button, DialogActions, DialogTitle } from '@mui/material';
+import { Box, Button, DialogActions, DialogTitle, Typography } from '@mui/material';
 // components
 import Iconify from './Iconify';
 
@@ -21,6 +21,7 @@ export default function ViewerPrintPdf({ onCancel, details }) {
         (details.srcPdf !== undefined && details.srcPdf !== null && details.srcPdf !== "") &&
         <>
           <DialogTitle sx={{ flexGrow: 1 }} >{details.title}</DialogTitle>
+          <Typography sx={{ pl: 3, pt: 2, pr: 1, pb: 1 }}>{details.description}</Typography>
           <Box sx={{ p: 1 }}>
             <object height="600" width="100%" type="application/pdf" data={details.srcPdf} /*download={nameFile}*/>
               <Box

@@ -19,7 +19,7 @@ const CARDS = [
     srcPdf: '/assets/download/reconocimientos/09BC238D-C485-4193-8390-E0AD008F84C2.pdf',
     title: 'Título profesional',
     description:
-      'Título de licenciatura en Ingeniería Informática ',
+      'Título de licenciatura en Ingeniería Informática. Nota: Se ha ocultado información personal sensible, si necesitas una copia completa contáctame markconfig.dev@gmail.com',
     links: [
       { name: 'FarmaReyes page', url: 'https://www.farmareyes.com/' },
       { name: 'App Farmareyes', url: 'https://app.farmareyes.com/' }
@@ -95,7 +95,7 @@ const CardStyle = styled(Card)(({ theme }) => {
       boxShadow: `-40px 40px 80px 0 ${shadowCard(0.50)}`,
       // backgroundColor: theme.palette.grey[theme.palette.mode === 'light' ? 200 : 800],
       // backgroundColor: theme.palette.background.paper,
-  backgroundColor: theme.palette.background.neutral,
+      backgroundColor: theme.palette.background.neutral,
 
       '&:before': {
         boxShadow: `-20px 20px 40px 0 ${shadowCard(0.12)}`,

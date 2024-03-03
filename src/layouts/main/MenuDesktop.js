@@ -122,11 +122,11 @@ MenuDesktopItem.propTypes = {
 };
 
 function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
-  const { pathname } = useRouter();
+  const {/*pathname,*/ asPath } = useRouter();
 
   const { title, path, children } = item;
 
-  const isActive = (path) => pathname === path;
+  const isActive = (path) =>/*pathname*/ asPath === path;
 
   if (children) {
     return (

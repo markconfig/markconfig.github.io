@@ -33,7 +33,7 @@ MenuMobile.propTypes = {
 };
 
 export default function MenuMobile({ isOffset, isHome, navConfig }) {
-  const { pathname } = useRouter();
+  const { pathname, asPath } = useRouter();
 
   const [open, setOpen] = useState(false);
 
@@ -44,7 +44,7 @@ export default function MenuMobile({ isOffset, isHome, navConfig }) {
       handleDrawerClose();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [pathname]);
+  }, [pathname, asPath]);
 
   const handleOpen = () => {
     setOpen(!open);
@@ -106,10 +106,10 @@ MenuMobileItem.propTypes = {
 };
 
 function MenuMobileItem({ item, isOpen, onOpen }) {
-  const { pathname } = useRouter();
+  const { /*pathname,*/ asPath } = useRouter();
   const { title, path, icon, children } = item;
 
-  const isActive = pathname === path;
+  const isActive = /*pathname*/ asPath === path;
 
   if (children) {
     return (

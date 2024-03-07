@@ -3,8 +3,6 @@ import { m } from 'framer-motion';
 // @mui
 import { useTheme, styled } from '@mui/material/styles';
 import { Box, Grid, Card, Link, Stack, Button, Divider, Container, Typography } from '@mui/material';
-// _mock_
-import { _homePlans } from '../../_mock';
 // components
 import Image from '../../components/Image';
 import Iconify from '../../components/Iconify';
@@ -51,16 +49,6 @@ export default function HomeContact() {
             </Typography> */}
           </m.div>
         </Box>
-
-        {/* <Grid container spacing={5}>
-          {_homePlans.map((plan) => (
-            <Grid key={plan.license} item xs={12} md={4}>
-              <m.div variants={plan.license === 'Standard Plus' ? varFade().inDown : varFade().inUp}>
-                <PlanCard plan={plan} />
-              </m.div>
-            </Grid>
-          ))}
-        </Grid> */}
 
         <m.div variants={varFade().in}>
           <Box sx={{ p: 5, mt: 10, textAlign: 'center' }}>

@@ -3,8 +3,6 @@ import NextLink from 'next/link';
 // @mui
 import { styled, useTheme } from '@mui/material/styles';
 import { Button, Box, Link, Container, Typography, Stack } from '@mui/material';
-// routes
-import { PATH_DASHBOARD } from '../../routes/paths';
 // components
 import Image from '../../components/Image';
 import Iconify from '../../components/Iconify';

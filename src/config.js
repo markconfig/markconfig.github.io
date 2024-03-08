@@ -45,3 +45,5 @@ export const defaultSettings = {
 };
 
 export const HOST_NAME = process.env.HOST_NAME;
+export const blogDescription = 'Un pequeño blog, en donde se habla de lo que sea';
+export const blogTitle = 'Markconfig blog';

@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 // @mui
 import { Box, Card, Divider, Container, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
@@ -25,7 +25,7 @@ import {
   // BlogPostCommentForm,
 } from '../../../sections/blog';
 
-import { HOST_NAME } from '../../../config';
+import { HOST_NAME, blogDescription } from '../../../config';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
@@ -55,14 +55,13 @@ BlogPost.propTypes = {
 
 export default function BlogPost({ currentPost, latestPosts }) {
   const { themeStretch } = useSettings();
-
   // const { query } = useRouter();
 
   // const { title } = query;
 
   const [recentPosts, setRecentPosts] = useState(latestPosts);
 
-  const [post, setPost] = useState(currentPost);
+  const [post, setPost] = useState(null);
 
   const [error, setError] = useState(null);
 
@@ -85,8 +84,7 @@ export default function BlogPost({ currentPost, latestPosts }) {
   //   }
   // }, [isMountedRef/*, title*/]);
 
-
-  const generateMetaInfo = (postInfo) => {
+  const generateMetaInfo = (postInfo) => (
     <>
       <meta name="description" content={postInfo.description} />
       <meta name="keywords" content={postInfo?.tags.map((tag) => tag)} />
@@ -96,11 +94,11 @@ export default function BlogPost({ currentPost, latestPosts }) {
       <meta property="og:type" content={"article"} />
       <meta property="og:title" content={postInfo.title} />
       <meta property="og:site_name" content="Blog | Markconfig" />
-      <meta property='og:url' content={`${HOST_NAME}/`} />
+      <meta property='og:url' content={`${HOST_NAME}${PATH_MENU.blog.root}/`} />
       <meta property='og:image:alt' content={postInfo.altCover} />
       {/*Twitter conf */}
       <meta name='twitter:card' content='summary' />
-      <meta name='twitter:url' content={`${HOST_NAME}/blog/`} />
+      <meta name='twitter:url' content={`${HOST_NAME}${PATH_MENU.blog.root}/`} />
       <meta name='twitter:description' content={postInfo.description} />
       <meta name='twitter:creator' content='@Markconfig' />
       <meta property="twitter:image" content={postInfo.cover} />
@@ -108,7 +106,7 @@ export default function BlogPost({ currentPost, latestPosts }) {
       {/* <meta property="og:image:width" content="{{ page.image.width }}" />
         <meta property="og:image:height" content="{{ page.image.height }}" /> */}
     </>
-  }
+  );
 
   // const getRecentPosts = useCallback(async () => {
   //   try {
@@ -125,9 +123,15 @@ export default function BlogPost({ currentPost, latestPosts }) {
   // }, [isMountedRef, /*title*/]);
 
   // useEffect(() => {
-  //   // getPost();
+  //   getPost();
   //   getRecentPosts();
-  // }, [getRecentPosts, /*getPost*/]);
+  // }, [getPost, getRecentPosts]);
+
+  useEffect(() => {
+    if (currentPost != undefined && currentPost != null) {
+      setPost(currentPost);
+    }
+  }, [currentPost]);
 
   return (
     // <Page title="Blog: Post Details">
@@ -136,7 +140,7 @@ export default function BlogPost({ currentPost, latestPosts }) {
         <ContentStyle>
           <Container maxWidth={themeStretch ? false : 'lg'}>
             <HeaderBreadcrumbs
-              heading="Un pequeño blog, en donde se habla de lo que sea."
+              heading={blogDescription}
               links={[
                 { name: 'Inicio', href: PATH_MENU.home },
                 { name: 'Blog', href: PATH_MENU.blog.root },

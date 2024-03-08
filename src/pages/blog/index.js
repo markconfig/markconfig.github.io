@@ -18,6 +18,7 @@ import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
 import { BlogPostCard, BlogPostsSort, /*BlogPostsSearch*/ } from '../../sections/blog';
 //api blogs
 import { getAllPosts } from '../../utils/lib/api';
+import { HOST_NAME, blogDescription, blogTitle } from '../../config';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
@@ -98,15 +99,36 @@ export default function BlogPosts({ AllPosts }) {
     }
   };
 
-  return (
-    <Page title="Blog: Posts">
-      <RootStyle>
+  const generateMetaInfo = () => (
+    <>
+      <meta name="description" content={blogDescription} />
+      <meta name="keywords" content={'Blog, Markconfig, Articulos, Entretenimiento, Poesía, Reflexión'} />
+      {/* http://ogp.me/ */}
+      <meta property="og:description" content={blogDescription} />
+      <meta property="og:title" content={blogTitle} />
+      <meta property="og:type" content={"website"} />
+      <meta property="og:site_name" content="Blog | Markconfig" />
+      <meta property='og:url' content={`${HOST_NAME}${PATH_MENU.blog.root}/`} />
+      {/*Twitter conf */}
+      <meta name='twitter:card' content='summary' />
+      <meta name='twitter:url' content={`${HOST_NAME}${PATH_MENU.blog.root}/`} />
+      <meta name='twitter:description' content={blogDescription} />
+      <meta name='twitter:creator' content='@Markconfig' />
+      {/* <meta property="twitter:image" content={postInfo.cover} /> */}
+      <meta property="twitter:title" content={blogTitle} />
+    </>
+  )
 
+  return (
+    <Page title="Markconfig Blog" meta={generateMetaInfo()} >
+      <RootStyle>
         <ContentStyle>
           <Container maxWidth={themeStretch ? false : 'lg'}>
             <HeaderBreadcrumbs
-              heading="Blog"
+              key={'Bposts'}
+              heading="Markconfig blog"
               links={[
+                { name: 'Inicio', href: PATH_MENU.home },
                 { name: 'Blog', href: PATH_MENU.blog.root },
                 { name: 'Posts' },
               ]}

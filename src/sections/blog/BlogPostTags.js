@@ -2,9 +2,9 @@ import PropTypes from 'prop-types';
 // @mui
 import { Box, Chip, Avatar, Checkbox, AvatarGroup, FormControlLabel } from '@mui/material';
 // utils
-import { fShortenNumber } from '../../../utils/formatNumber';
+import { fShortenNumber } from '../../utils/formatNumber';
 // components
-import Iconify from '../../../components/Iconify';
+import Iconify from '../../components/Iconify';
 
 // ----------------------------------------------------------------------
 
@@ -13,15 +13,15 @@ BlogPostTags.propTypes = {
 };
 
 export default function BlogPostTags({ post }) {
-  const { favorite, tags, favoritePerson } = post;
+  const { favorite, tags, /*favoritePerson*/ } = post;
 
   return (
     <Box sx={{ py: 3 }}>
       {tags.map((tag) => (
-        <Chip key={tag} label={tag} sx={{ m: 0.5 }} />
+        <Chip key={tag} label={tag} sx={{ m: 0.5, textTransform: 'capitalize' }} />
       ))}
 
-      <Box sx={{ display: 'flex', alignItems: 'center', mt: 3 }}>
+      {/* <Box sx={{ display: 'flex', alignItems: 'center', mt: 3 }}>
         <FormControlLabel
           control={
             <Checkbox
@@ -44,7 +44,7 @@ export default function BlogPostTags({ post }) {
             <Avatar key={person.name} alt={person.name} src={person.avatarUrl} />
           ))}
         </AvatarGroup>
-      </Box>
+      </Box> */}
     </Box>
   );
 }

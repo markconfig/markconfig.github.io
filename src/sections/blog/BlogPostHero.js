@@ -1,35 +1,20 @@
 import PropTypes from 'prop-types';
 // @mui
 import { alpha, styled } from '@mui/material/styles';
-import { Box, Avatar, SpeedDial, Typography, SpeedDialAction } from '@mui/material';
+import { Box, Avatar, SpeedDial, Typography, SpeedDialAction, Link } from '@mui/material';
 // hooks
-import useResponsive from '../../../hooks/useResponsive';
+import useResponsive from '../../hooks/useResponsive';
 // utils
-import { fDate } from '../../../utils/formatTime';
+import { fDateExtend } from '../../utils/formatTime';
 // components
-import Image from '../../../components/Image';
-import Iconify from '../../../components/Iconify';
+import Image from '../../components/Image';
+import Iconify from '../../components/Iconify';
+import { useRouter } from 'next/router';
+import { HOST_NAME } from '../../config';
 
 // ----------------------------------------------------------------------
 
-const SOCIALS = [
-  {
-    name: 'Facebook',
-    icon: <Iconify icon="eva:facebook-fill" width={20} height={20} color="#1877F2" />,
-  },
-  {
-    name: 'Instagram',
-    icon: <Iconify icon="ant-design:instagram-filled" width={20} height={20} color="#D7336D" />,
-  },
-  {
-    name: 'Linkedin',
-    icon: <Iconify icon="eva:linkedin-fill" width={20} height={20} color="#006097" />,
-  },
-  {
-    name: 'Twitter',
-    icon: <Iconify icon="eva:twitter-fill" width={20} height={20} color="#1C9CEA" />,
-  },
-];
+
 
 const OverlayStyle = styled('h1')(({ theme }) => ({
   top: 0,
@@ -81,9 +66,34 @@ BlogPostHero.propTypes = {
 };
 
 export default function BlogPostHero({ post }) {
-  const { cover, title, author, createdAt } = post;
+  const { cover, title, author, createdAt, readingTime } = post;
+  const router = useRouter();
 
   const isDesktop = useResponsive('up', 'sm');
+
+  const SOCIALS = [
+    {
+      name: 'Facebook',
+      icon: <Iconify icon="eva:facebook-fill" width={20} height={20} color="#1877F2" />,
+      url: `https://www.facebook.com/sharer/sharer.php?u=${HOST_NAME}/blog/${post.slug}&amp;src=sdkpreparse&sfnsn=scwspwa`,
+    },
+    {
+      name: 'Whatsapp',
+      icon: <Iconify icon="logos:whatsapp-icon" width={20} height={20} color="#1faf38" />,
+      url: `https://api.whatsapp.com/send?text=%C2%A1Que%20buen%20post%21%20de%20%40markconfig%20${HOST_NAME}/blog/${post.slug}`,
+    },
+    {
+      name: 'X(Twitter)',
+      icon: <Iconify icon="ri:twitter-x-fill" width={20} height={20} color="#000000" />,
+      url: `https://twitter.com/intent/tweet?text=%C2%A1Que%20buen%20post%21%20de%20%40markconfig%20&url=${HOST_NAME}/blog/${post.slug}&hashtags=markconfigblog`,
+    },
+    {
+      name: 'Linkedin',
+      icon: <Iconify icon="eva:linkedin-fill" width={20} height={20} color="#006097" />,
+      url: `https://www.linkedin.com/sharing/share-offsite/?url=${HOST_NAME}/blog/${post.slug}`,
+    },
+
+  ];
 
   return (
     <Box sx={{ position: 'relative' }}>
@@ -97,14 +107,17 @@ export default function BlogPostHero({ post }) {
               {author.name}
             </Typography>
             <Typography variant="body2" sx={{ color: 'grey.500' }}>
-              {fDate(createdAt)}
+              {fDateExtend(createdAt)}
+            </Typography>
+            <Typography variant="body2" sx={{ color: 'grey.500' }}>
+              {`${readingTime?.min} minutos de lectura`}
             </Typography>
           </Box>
         </Box>
 
         <SpeedDial
           direction={isDesktop ? 'left' : 'up'}
-          ariaLabel="Share post"
+          ariaLabel="Compartir post"
           icon={<Iconify icon="eva:share-fill" sx={{ width: 20, height: 20 }} />}
           sx={{ '& .MuiSpeedDial-fab': { width: 48, height: 48 } }}
         >
@@ -115,13 +128,15 @@ export default function BlogPostHero({ post }) {
               tooltipTitle={action.name}
               tooltipPlacement="top"
               FabProps={{ color: 'default' }}
+              href={action.url}
+              target='_blank'
             />
           ))}
         </SpeedDial>
       </FooterStyle>
 
       <OverlayStyle />
-      <Image alt="post cover" src={cover} ratio="16/9" />
+      <Image alt="post cover" src={cover} ratio={isDesktop ? '16/9' : '3/4'} />
     </Box>
   );
 }

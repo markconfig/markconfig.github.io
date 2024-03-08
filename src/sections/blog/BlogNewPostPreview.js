@@ -5,11 +5,11 @@ import { LoadingButton } from '@mui/lab';
 import { alpha } from '@mui/material/styles';
 import { Box, Button, Container, Typography, DialogActions } from '@mui/material';
 // components
-import Image from '../../../components/Image';
-import Markdown from '../../../components/Markdown';
-import Scrollbar from '../../../components/Scrollbar';
-import EmptyContent from '../../../components/EmptyContent';
-import { DialogAnimate } from '../../../components/animate';
+import Image from '../../components/Image';
+import Markdown from '../../components/Markdown';
+import Scrollbar from '../../components/Scrollbar';
+import EmptyContent from '../../components/EmptyContent';
+import { DialogAnimate } from '../../components/animate';
 
 // ----------------------------------------------------------------------
 

@@ -14,7 +14,7 @@ export default function BlogPostRecent({ posts }) {
   return (
     <>
       <Typography variant="h4" sx={{ mt: 10, mb: 5 }}>
-        Recent posts
+        Posts recientes
       </Typography>
 
       <Grid container spacing={3}>

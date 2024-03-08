@@ -8,16 +8,16 @@ import { useRouter } from 'next/router';
 import { styled } from '@mui/material/styles';
 import { Link, Typography, Autocomplete, InputAdornment, Popper } from '@mui/material';
 // hooks
-import useIsMountedRef from '../../../hooks/useIsMountedRef';
+import useIsMountedRef from '../../hooks/useIsMountedRef';
 // utils
-import axios from '../../../utils/axios';
+import axios from '../../utils/axios';
 // routes
-import { PATH_DASHBOARD } from '../../../routes/paths';
+import { PATH_MENU } from '../../routes/paths';
 // components
-import Image from '../../../components/Image';
-import Iconify from '../../../components/Iconify';
-import InputStyle from '../../../components/InputStyle';
-import SearchNotFound from '../../../components/SearchNotFound';
+import Image from '../../components/Image';
+import Iconify from '../../components/Iconify';
+import InputStyle from '../../components/InputStyle';
+import SearchNotFound from '../../components/SearchNotFound';
 
 // ----------------------------------------------------------------------
 
@@ -54,7 +54,7 @@ export default function BlogPostsSearch() {
   };
 
   const handleClick = (title) => {
-    push(PATH_DASHBOARD.blog.view(paramCase(title)));
+    push(PATH_MENU.blog.view(paramCase(title)));
   };
 
   const handleKeyUp = (event) => {

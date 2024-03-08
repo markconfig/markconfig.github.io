@@ -98,8 +98,9 @@ export default function TechnologiesIcon({ initialColor = false, simple = true, 
         if (visible) {
           return simple ? (
             // <Link key={name} href={path}>
-            <Tooltip title={name} placement="top">
+            <Tooltip key={`tool${name}`} title={name} placement="top">
               <IconButton
+                key={`butt${name}`}
                 color="inherit"
                 sx={{
                   ...(initialColor && {
@@ -113,7 +114,7 @@ export default function TechnologiesIcon({ initialColor = false, simple = true, 
                 }}
                 {...other}
               >
-                <Iconify icon={icon} sx={{ width: 30, height: 30 }} />
+                <Iconify key={`icon${name}`} icon={icon} sx={{ width: 30, height: 30 }} />
               </IconButton>
             </Tooltip>
             // </Link>

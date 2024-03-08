@@ -8,13 +8,6 @@ import Page from '../components/Page';
 import {
   HomeMarkconfig,
   HomePortfolio,
-  // HomeMinimal,
-  // HomeDarkMode,
-  // HomeLookingFor,
-  // HomeColorPresets,
-  // HomePricingPlans,
-  // HomeAdvertisement,
-  // HomeCleanInterfaces,
   HomeAboutMe,
   HomeContact,
   HomeRecognitions,
@@ -47,26 +40,9 @@ export default function HomePage() {
         <HomeMarkconfig />
         <ContentStyle>
           <HomeAboutMe />
-
           <HomePortfolio />
-
           <HomeRecognitions />
-
-          {/* <HomeMinimal /> */}
-
-          {/* <HomeDarkMode /> */}
-
-          {/* <HomeColorPresets /> */}
-
-          {/* <HomeCleanInterfaces /> */}
-
           <HomeContact />
-
-          {/* <HomePricingPlans /> */}
-
-          {/* <HomeLookingFor /> */}
-
-          {/* <HomeAdvertisement /> */}
         </ContentStyle>
       </RootStyle>
     </Page>

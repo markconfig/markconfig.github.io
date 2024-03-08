@@ -8,8 +8,8 @@ import { CacheProvider } from '@emotion/react';
 import createCache from '@emotion/cache';
 import createEmotionServer from '@emotion/server/create-instance';
 // theme
-import palette from '../theme/palette';
-
+// import palette from '../theme/palette';
+import getColorPresets from '../utils/getColorPresets';
 import { HOST_NAME } from '../config';
 // ----------------------------------------------------------------------
 
@@ -79,11 +79,10 @@ export default class MyDocument extends Document {
           {/* Microsoft */}
           <meta name="msapplication-TileColor" content="#ffffff" />
           <meta name="msapplication-config" content="/logo/microsoft/browserconfig.xml" />
-          {/* <meta name="theme-color" content="#ffffff" /> */}
           <meta name="msapplication-TileImage" content="/logo/microsoft/ms-icon-144x144.png" />
 
-          <meta name="theme-color" content={palette.light.primary.main} />
-
+          {/* <meta name="theme-color" content={palette.light.primary.main} /> */}
+          <meta name="theme-color" content={getColorPresets('blue').main} />
           <link rel="preconnect" href="https://fonts.gstatic.com" />
           <link
             href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;500;600;700&display=swap"

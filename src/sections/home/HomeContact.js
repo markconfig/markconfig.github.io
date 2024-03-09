@@ -1,8 +1,8 @@
 import PropTypes from 'prop-types';
 import { m } from 'framer-motion';
 // @mui
-import { useTheme, styled } from '@mui/material/styles';
-import { Box, Grid, Card, Link, Stack, Button, Divider, Container, Typography } from '@mui/material';
+import { /*useTheme,*/ styled } from '@mui/material/styles';
+import { Box, Card, Link, Stack, Button, Divider, Container, Typography } from '@mui/material';
 // components
 import Image from '../../components/Image';
 import Iconify from '../../components/Iconify';
@@ -21,9 +21,9 @@ const RootStyle = styled('div')(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function HomeContact() {
-  const theme = useTheme();
+  // const theme = useTheme();
 
-  const isLight = theme.palette.mode === 'light';
+  // const isLight = theme.palette.mode === 'light';
 
   return (
     <RootStyle id={'contact'}>

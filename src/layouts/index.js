@@ -2,6 +2,7 @@ import PropTypes from 'prop-types';
 // components
 import MainLayout from './main';
 import LogoOnlyLayout from './LogoLargeOnlyLayout';
+import LogoLargeOnlyLayout from './LogoLargeOnlyLayout';
 
 // ----------------------------------------------------------------------
 

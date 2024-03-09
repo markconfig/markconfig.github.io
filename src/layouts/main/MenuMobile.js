@@ -28,11 +28,11 @@ const ListItemStyle = styled(ListItemButton)(({ theme }) => ({
 
 MenuMobile.propTypes = {
   isOffset: PropTypes.bool,
-  isHome: PropTypes.bool,
+  // isHome: PropTypes.bool,
   navConfig: PropTypes.array,
 };
 
-export default function MenuMobile({ isOffset, isHome, navConfig }) {
+export default function MenuMobile({ isOffset, /*isHome,*/ navConfig }) {
   const { pathname, asPath } = useRouter();
 
   const [open, setOpen] = useState(false);

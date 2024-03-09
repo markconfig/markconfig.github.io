@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import { paramCase } from 'change-case';
 // next
 import NextLink from 'next/link';
 // @mui
@@ -11,13 +10,10 @@ import { PATH_MENU } from '../../routes/paths';
 import useResponsive from '../../hooks/useResponsive';
 // utils
 import { fDate } from '../../utils/formatTime';
-import { fShortenNumber } from '../../utils/formatNumber';
 // components
 import Image from '../../components/Image';
-import Iconify from '../../components/Iconify';
 import TextMaxLine from '../../components/TextMaxLine';
 import SvgIconStyle from '../../components/SvgIconStyle';
-import TextIconLabel from '../../components/TextIconLabel';
 
 // ----------------------------------------------------------------------
 
@@ -113,7 +109,7 @@ PostContent.propTypes = {
   readingTime: PropTypes.object,
 };
 
-export function PostContent({ slug, title, view, comment, share, createdAt, index, readingTime }) {
+export function PostContent({ slug, title, /*view, comment, share,*/ createdAt, index, readingTime }) {
   const isDesktop = useResponsive('up', 'md');
 
   // const linkTo = PATH_MENU.blog.view(paramCase(slug));
@@ -123,11 +119,11 @@ export function PostContent({ slug, title, view, comment, share, createdAt, inde
   const latestPostLarge = index === 0;
   const latestPostSmall = index === 1 || index === 2;
 
-  const POST_INFO = [
-    { number: comment, icon: 'eva:message-circle-fill' },
-    { number: view, icon: 'eva:eye-fill' },
-    { number: share, icon: 'eva:share-fill' },
-  ];
+  // const POST_INFO = [
+  //   { number: comment, icon: 'eva:message-circle-fill' },
+  //   { number: view, icon: 'eva:eye-fill' },
+  //   { number: share, icon: 'eva:share-fill' },
+  // ];
 
   return (
     <CardContent

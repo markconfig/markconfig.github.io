@@ -1,10 +1,8 @@
 import PropTypes from 'prop-types';
 // next
-import { useRouter } from 'next/router';
+// import { useRouter } from 'next/router';
 // @mui
-import { Box, Link, Container, Typography, Stack } from '@mui/material';
-// components
-import Logo from '../../components/Logo';
+import { Box, Stack } from '@mui/material';
 //
 import MainFooter from './MainFooter';
 import MainHeader from './MainHeader';
@@ -16,9 +14,9 @@ MainLayout.propTypes = {
 };
 
 export default function MainLayout({ children }) {
-  const { pathname } = useRouter();
+  // const { pathname } = useRouter();
 
-  const isHome = pathname === '/';
+  // const isHome = pathname === '/';
 
   return (
     <Stack sx={{ minHeight: 1 }}>

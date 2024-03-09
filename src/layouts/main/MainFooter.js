@@ -4,7 +4,7 @@ import NextLink from 'next/link';
 import { styled } from '@mui/material/styles';
 import { Grid, Link, Divider, Container, Typography, Stack } from '@mui/material';
 // routes
-import { PATH_PAGE, PATH_SOCIAL_NETWORK } from '../../routes/paths';
+import { PATH_SOCIAL_NETWORK } from '../../routes/paths';
 // components
 import Logo from '../../components/Logo';
 import SocialsButton from '../../components/SocialsButton';

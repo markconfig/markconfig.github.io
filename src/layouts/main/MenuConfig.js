@@ -1,8 +1,6 @@
 // routes
 import { PATH_MENU } from '../../routes/paths';
 // components
-import { PATH_AFTER_LOGIN } from '../../config';
-// components
 import Iconify from '../../components/Iconify';
 
 // ----------------------------------------------------------------------

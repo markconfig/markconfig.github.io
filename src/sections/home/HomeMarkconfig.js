@@ -1,12 +1,10 @@
 import { m } from 'framer-motion';
 import NextLink from 'next/link';
 // @mui
-import { styled, useTheme } from '@mui/material/styles';
-import { Button, Box, Link, Container, Typography, Stack } from '@mui/material';
+import { styled, /*useTheme*/ } from '@mui/material/styles';
+import { Button, Box, Container, Typography, Stack } from '@mui/material';
 // components
-import Image from '../../components/Image';
 import Iconify from '../../components/Iconify';
-import TextIconLabel from '../../components/TextIconLabel';
 import { MotionContainer, varFade } from '../../components/animate';
 import SocialsButton from '../../components/SocialsButton';
 import { PATH_SOCIAL_NETWORK, PATH_MENU } from '../../routes/paths';
@@ -42,13 +40,13 @@ const ContentStyle = styled((props) => <Stack spacing={5} {...props} />)(({ them
   },
 }));
 
-const HeroOverlayStyle = styled(m.img)({
-  zIndex: 9,
-  width: '100%',
-  height: '100%',
-  objectFit: 'cover',
-  position: 'absolute',
-});
+// const HeroOverlayStyle = styled(m.img)({
+//   zIndex: 9,
+//   width: '100%',
+//   height: '100%',
+//   objectFit: 'cover',
+//   position: 'absolute',
+// });
 
 const HeroImgStyle = styled(m.img)(({ theme }) => ({
   top: 0,
@@ -56,7 +54,7 @@ const HeroImgStyle = styled(m.img)(({ theme }) => ({
   bottom: 0,
   // zIndex: 8,
   zIndex: 8,
-  opacity:'0 !important', //TEMP Se modificara despues para redimensionar la imagen de vienvenidad
+  opacity: '0 !important', //TEMP Se modificara despues para redimensionar la imagen de vienvenidad
   width: '100%',
   margin: 'auto',
   position: 'absolute',
@@ -64,16 +62,16 @@ const HeroImgStyle = styled(m.img)(({ theme }) => ({
     right: '8%',
     width: 'auto',
     height: '48vh',
-    opacity:'1 !important',//TEMP Se modificara despues para redimensionar la imagen de vienvenidad
+    opacity: '1 !important',//TEMP Se modificara despues para redimensionar la imagen de vienvenidad
   },
 }));
 
 // ----------------------------------------------------------------------
 
 export default function HomeMarkconfig() {
-  const theme = useTheme();
+  // const theme = useTheme();
 
-  const isLight = theme.palette.mode === 'light';
+  // const isLight = theme.palette.mode === 'light';
   return (
     <MotionContainer>
       <RootStyle>

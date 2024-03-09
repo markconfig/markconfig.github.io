@@ -109,7 +109,7 @@ function IconBullet({ type = 'item' }) {
 // ----------------------------------------------------------------------
 
 MenuDesktopItem.propTypes = {
-  isHome: PropTypes.bool,
+  // isHome: PropTypes.bool,
   isOffset: PropTypes.bool,
   isOpen: PropTypes.bool,
   onClose: PropTypes.func,
@@ -121,7 +121,7 @@ MenuDesktopItem.propTypes = {
   }),
 };
 
-function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
+function MenuDesktopItem({ item, /*isHome,*/ isOpen, isOffset, onOpen, onClose }) {
   const {/*pathname,*/ asPath } = useRouter();
 
   const { title, path, children } = item;

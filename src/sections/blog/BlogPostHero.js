@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 // @mui
 import { alpha, styled } from '@mui/material/styles';
-import { Box, Avatar, SpeedDial, Typography, SpeedDialAction, Link } from '@mui/material';
+import { Box, Avatar, SpeedDial, Typography, SpeedDialAction } from '@mui/material';
 // hooks
 import useResponsive from '../../hooks/useResponsive';
 // utils
@@ -9,7 +9,6 @@ import { fDateExtend } from '../../utils/formatTime';
 // components
 import Image from '../../components/Image';
 import Iconify from '../../components/Iconify';
-import { useRouter } from 'next/router';
 import { HOST_NAME } from '../../config';
 
 // ----------------------------------------------------------------------
@@ -67,7 +66,6 @@ BlogPostHero.propTypes = {
 
 export default function BlogPostHero({ post }) {
   const { cover, title, author, createdAt, readingTime } = post;
-  const router = useRouter();
 
   const isDesktop = useResponsive('up', 'sm');
 

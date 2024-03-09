@@ -1,10 +1,6 @@
 import PropTypes from 'prop-types';
 // @mui
-import { Box, Chip, Avatar, Checkbox, AvatarGroup, FormControlLabel } from '@mui/material';
-// utils
-import { fShortenNumber } from '../../utils/formatNumber';
-// components
-import Iconify from '../../components/Iconify';
+import { Box, Chip } from '@mui/material';
 
 // ----------------------------------------------------------------------
 
@@ -13,7 +9,7 @@ BlogPostTags.propTypes = {
 };
 
 export default function BlogPostTags({ post }) {
-  const { favorite, tags, /*favoritePerson*/ } = post;
+  const { /*favorite,*/ tags, /*favoritePerson*/ } = post;
 
   return (
     <Box sx={{ py: 3 }}>

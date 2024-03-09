@@ -156,7 +156,7 @@ function MenuMobileItem({ item, isOpen, onOpen }) {
   }
 
   return (
-    <NextLink href={path} passHref>
+    <NextLink legacyBehavior href={path} passHref>
       <ListItemStyle
         sx={{
           ...(isActive && {

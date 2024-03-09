@@ -158,7 +158,7 @@ export function PostContent({ slug, title, view, comment, share, createdAt, inde
         {fDate(createdAt)}
       </Typography>
 
-      <NextLink href={linkTo} passHref>
+      <NextLink legacyBehavior href={linkTo} passHref>
         <Link color="inherit">
           <TextMaxLine variant={isDesktop && latestPostLarge ? 'h5' : 'subtitle2'} line={2} persistent>
             {title}

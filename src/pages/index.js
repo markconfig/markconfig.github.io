@@ -35,7 +35,7 @@ HomePage.getLayout = function getLayout(page) {
 
 export default function HomePage() {
   return (
-    <Page title="Home">
+    <Page title="Inicio">
       <RootStyle>
         <HomeMarkconfig />
         <ContentStyle>

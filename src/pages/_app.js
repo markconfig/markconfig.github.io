@@ -1,11 +1,9 @@
 // highlight
 import '../utils/highlight';
 
-// scroll bar
-import 'simplebar/src/simplebar.css';
-
-// lightbox
-import 'react-image-lightbox/style.css';
+// // scroll bar
+// import 'simplebar/src/simplebar.css';
+import 'simplebar/dist/simplebar.css';
 
 // editor
 import 'react-quill/dist/quill.snow.css';

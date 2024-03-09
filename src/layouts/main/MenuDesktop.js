@@ -191,7 +191,7 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
                     </ListSubheader>
 
                     {items.map((item) => (
-                      <NextLink key={item.title} href={item.path} passHref>
+                      <NextLink legacyBehavior key={item.title} href={item.path} passHref>
                         <ListItemStyle
                           underline="none"
                           sx={{
@@ -258,7 +258,7 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
   }
 
   return (
-    <NextLink href={path} passHref>
+    <NextLink legacyBehavior href={path} passHref>
       <LinkStyle
         sx={{
           // ...(isHome && { color: 'common.white' }),

@@ -122,7 +122,7 @@ export default function MainFooter() {
                         {link.name}
                       </Typography>
                     ) : (
-                      <NextLink key={link.name} href={link.href} passHref>
+                      <NextLink legacyBehavior key={link.name} href={link.href} passHref>
                         <Link key={`${index.name}${index}`} color="inherit" target={link.target || '_blank'} variant="body2" sx={{ display: 'block' }}>
                           {link.name}
                         </Link>

@@ -12,7 +12,7 @@ import {
   HomeContact,
   HomeRecognitions,
 } from '../sections/home';
-import MetaTag from '../components/MetaTag';
+import { META_TAGS } from '../config';
 
 // ----------------------------------------------------------------------
 
@@ -28,30 +28,30 @@ const ContentStyle = styled('div')(({ theme }) => ({
 
 // ----------------------------------------------------------------------
 
-// const generateMetaInfo = () => (
-//   <>
-//     <meta name="description" content="Sitio web, portafolio, contacto y blog de Markconfig" />
-//     <meta name="author" content="@markconfig" />
-//     <meta name="keywords" content="web,frontend,backend,javascript,java,springboot,react,developer,desarrollador,software" />
-//     {/* Og properties */}
-//     <meta property="og:image" content={`${HOST_NAME}/logo/og/markconfig.png`} />
-//     <meta property="og:description" content="Sitio web, portafolio, contacto y blog de Markconfig" />
-//     <meta property='og:type' content='website' />
-//     <meta property='og:title' content='Markconfig - Desarrollador de software, Java, Spring Boot, React, NextJs, Javascript, MySQL, Arduino' />
-//     <meta property='og:site_name' content='Markconfig' />
-//     <meta property='og:url' content={`${HOST_NAME}/`} />
-//     <meta property='og:image:alt' content='Logotipo Markconfig' />
-//     {/*Twitter conf */}
-//     <meta name='twitter:card' content='summary' />
-//     <meta name='twitter:url' content={`${HOST_NAME}/`} />
-//     <meta name='twitter:title'
-//       content='Markconfig - Desarrollador de software, Java, Spring Boot, React, NextJs, Javascript, MySQL, Arduino' />
-//     <meta name='twitter:description' content='Sitio web, portafolio, contacto y blog de Markconfig' />
-//     <meta name='twitter:creator' content='@Markconfig' />
-//     {/*         En esta etiqueta se tiene que editar la url de la imagen haciendoa coincidir con el host*/}
-//     <meta property="twitter:image" content={`${HOST_NAME}/logo/og/markconfig.png`} />
-//   </>
-// );
+const generateMetaInfo = (page) => (
+  <>
+    <meta name="description" content={page} key={page} />
+    <meta name="author" content={META_TAGS.author[page]} key={META_TAGS.author.key} />
+    <meta name="keywords" content={META_TAGS.keywords[page]} key={META_TAGS.keywords.key} />
+    {/* Og properties */}
+    <meta property="og:image" content={META_TAGS.og.image[page]} key={META_TAGS.og.image.key} />
+    <meta property="og:description" content={META_TAGS.og.description[page]} key={META_TAGS.og.description.key} />
+    <meta property="og:type" content={META_TAGS.og.type[page]} key={META_TAGS.og.type.key} />
+    <meta property="og:title" content={META_TAGS.og.title[page]} key={META_TAGS.og.title.key} />
+    <meta property="og:site_name" content={META_TAGS.og.siteName[page]} key={META_TAGS.og.siteName.key} />
+    <meta property='og:url' content={META_TAGS.og.url[page]} key={META_TAGS.og.url.key} />
+    <meta property='og:image:alt' content={META_TAGS.og.imageAlt[page]} />
+    {/*Twitter conf */}
+    <meta name='twitter:card' content={META_TAGS.tw.card[page]} key={META_TAGS.tw.card.key} />
+    <meta name='twitter:url' content={META_TAGS.tw.url[page]} key={META_TAGS.tw.url.key} />
+    <meta property="twitter:title" content={META_TAGS.tw.title[page]} key={META_TAGS.tw.title.key} />
+    <meta name='twitter:description' content={META_TAGS.tw.description[page]} key={META_TAGS.tw.description.key} />
+    <meta name='twitter:creator' content={META_TAGS.tw.creator[page]} key={META_TAGS.tw.creator.key} />
+    {/*         En esta etiqueta se tiene que editar la url de la imagen haciendoa coincidir con el host*/}
+    <meta property="twitter:image" content={META_TAGS.tw.image[page]} key={META_TAGS.tw.image.key} />
+
+  </>
+);
 
 // ----------------------------------------------------------------------
 
@@ -63,7 +63,7 @@ HomePage.getLayout = function getLayout(page) {
 
 export default function HomePage() {
   return (
-    <Page title="Inicio" meta={<MetaTag page='home' />}>
+    <Page title="Inicio" meta={generateMetaInfo('home')} >
       <RootStyle>
         <HomeMarkconfig />
         <ContentStyle>
@@ -76,3 +76,4 @@ export default function HomePage() {
     </Page>
   );
 }
+

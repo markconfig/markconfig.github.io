@@ -89,7 +89,7 @@ export const META_TAGS = {
       blogHome: blogTitle,
       key: 'ogTitle'
     },
-    title: {
+    description: {
       home: homeDescription,
       blogHome: blogDescription,
       key: 'ogDescription'

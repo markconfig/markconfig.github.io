@@ -29,7 +29,7 @@ export default class MyDocument extends Document {
           <meta name='apple-mobile-web-app-capable' content='yes' />
           <meta name='apple-mobile-web-app-status-bar-style' content='default' />
           <meta name='apple-mobile-web-app-title' content='Markconfig' />
-          <meta name='description' content='Sitio web, portafolio, contacto y blog de Markconfig' />
+          {/* <meta name='description' content='Sitio web, portafolio, contacto y blog de Markconfig' /> */}
           <meta name='format-detection' content='telephone=no' />
           <meta name='mobile-web-app-capable' content='yes' />
 

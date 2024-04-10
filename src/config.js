@@ -45,5 +45,101 @@ export const defaultSettings = {
 };
 
 export const HOST_NAME = process.env.HOST_NAME;
-export const blogDescription = 'Un pequeño blog, en donde se habla de lo que sea';
-export const blogTitle = 'Markconfig blog';
+//For meta tags open graph
+const blogDescription = 'Un pequeño blog, en donde se habla de lo que sea';
+const blogTitle = 'Markconfig blog';
+const homeTitle = 'Markconfig - Desarrollador de software, Java, Spring Boot, React, NextJs, Javascript, MySQL, Arduino';
+const homeDescription = 'Sitio web, portafolio, contacto y blog de Markconfig';
+const author = '@markconfig'
+
+
+/**
+ *   og: Open Graph properties
+ *   tw: Twitter Open Graph properties
+ */
+export const META_TAGS = {
+  description: {
+    home: homeDescription,
+    blogHome: blogDescription,
+    key: 'description',
+  },
+  author: {
+    home: author,
+    blogHome: author,
+    key: 'author',
+  },
+  keywords: {
+    home: 'web, frontend, backend, javascript, java, springboot, react, developer, desarrollador, software',
+    blogHome: 'blog, markconfig, articulos, entretenimiento, poesía, reflexión',
+    key: 'keywords',
+  },
+  og: {
+    image: {
+      home: `${HOST_NAME}/logo/og/markconfig.png`,
+      blogHome: `${HOST_NAME}/logo/og/markconfig.png`,
+      key: 'ogImage',
+    },
+    type: {
+      home: 'website',
+      blogHome: 'blog',
+      key: 'ogType'
+    },
+    title: {
+      home: homeTitle,
+      blogHome: blogTitle,
+      key: 'ogTitle'
+    },
+    title: {
+      home: homeDescription,
+      blogHome: blogDescription,
+      key: 'ogDescription'
+    },
+    siteName: {
+      home: 'Markconfig',
+      blogHome: blogTitle,
+      key: 'ogSiteName'
+    },
+    url: {
+      home: `${HOST_NAME}/`,
+      blogHome: `${HOST_NAME}/blog/`,
+      key: 'ogUrl'
+    },
+    imageAlt: {
+      home: 'Logotipo Markconfig',
+      blogHome: 'Logotipo Markconfig blog',
+      key: 'ogImageAlt'
+    }
+  },
+  tw: {
+    card: {
+      home: 'summary',
+      blogHome: 'summary',
+      key: 'ogTwCard',
+    },
+    url: {
+      home: `${HOST_NAME}/`,
+      blogHome: `${HOST_NAME}/blog/`,
+      key: 'ogTwUrl',
+    },
+    title: {
+      home: homeTitle,
+      blogHome: blogTitle,
+      key: 'ogTwTitle',
+    },
+    description: {
+      home: homeDescription,
+      blogHome: blogDescription,
+      key: 'ogTwDescription',
+    },
+    creator: {
+      home: author,
+      blogHome: author,
+      key: 'ogTwCreator',
+    },
+    image: {
+      home: `${HOST_NAME}/logo/og/markconfig.png`,
+      blogHome: `${HOST_NAME}/logo/og/markconfig.png`,
+      key: 'ogTwImage',
+    }
+  }
+};

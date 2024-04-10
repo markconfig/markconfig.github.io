@@ -23,20 +23,7 @@ export default class MyDocument extends Document {
       <Html lang="es">
         <Head>
           <meta charSet="utf-8" />
-          <meta name="description" content="Sitio web, portafolio, contacto y blog de Markconfig" />
-          <meta name="author" content="@markconfig" />
-          <meta name="keywords" content="web,frontend,backend,javascript,java,springboot,react,developer,desarrollador,software" />
-
-          {/* Og properties */}
-          {/* En esta etiqueta se tiene que editar la url de la imagen haciendoa coincidir con el host*/}
-          <meta property="og:image" content={`${HOST_NAME}/logo/og/markconfig.png`} />
-          <meta property="og:description" content="Sitio web, portafolio, contacto y blog de Markconfig" />
-          <meta property='og:type' content='website' />
-          <meta property='og:title' content='Markconfig - Desarrollador de software, Java, Spring Boot, React, NextJs, Javascript, MySQL, Arduino' />
-          <meta property='og:site_name' content='Markconfig' />
-          <meta property='og:url' content={`${HOST_NAME}/`} />
-          <meta property='og:image:alt' content='Logotipo Markconfig' />
-
+     
           {/* PWA head meta */}
           <meta name='application-name' content='Markconfig' />
           <meta name='apple-mobile-web-app-capable' content='yes' />
@@ -45,16 +32,6 @@ export default class MyDocument extends Document {
           <meta name='description' content='Sitio web, portafolio, contacto y blog de Markconfig' />
           <meta name='format-detection' content='telephone=no' />
           <meta name='mobile-web-app-capable' content='yes' />
-
-          {/*Twitter conf */}
-          <meta name='twitter:card' content='summary' />
-          <meta name='twitter:url' content={`${HOST_NAME}/`} />
-          <meta name='twitter:title'
-            content='Markconfig - Desarrollador de software, Java, Spring Boot, React, NextJs, Javascript, MySQL, Arduino' />
-          <meta name='twitter:description' content='Sitio web, portafolio, contacto y blog de Markconfig' />
-          <meta name='twitter:creator' content='@Markconfig' />
-          {/*         En esta etiqueta se tiene que editar la url de la imagen haciendoa coincidir con el host*/}
-          <meta property="twitter:image" content={`${HOST_NAME}/logo/og/markconfig.png`} />
 
           {/* Favicon */}
           <link rel="icon" type="image/svg" href="/logo/markconfigIcon.svg" />

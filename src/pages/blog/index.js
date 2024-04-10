@@ -19,6 +19,7 @@ import { BlogPostCard, BlogPostsSort, /*BlogPostsSearch*/ } from '../../sections
 //api blogs
 import { getAllPosts } from '../../utils/lib/api';
 import { HOST_NAME, blogDescription, blogTitle } from '../../config';
+import MetaTag from '../../components/MetaTag';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
@@ -99,28 +100,42 @@ export default function BlogPosts({ AllPosts }) {
     }
   };
 
-  const generateMetaInfo = () => (
-    <>
-      <meta name="description" content={blogDescription} />
-      <meta name="keywords" content={'Blog, Markconfig, Articulos, Entretenimiento, Poesía, Reflexión'} />
-      {/* http://ogp.me/ */}
-      <meta property="og:description" content={blogDescription} />
-      <meta property="og:title" content={blogTitle} />
-      <meta property="og:type" content={"website"} />
-      <meta property="og:site_name" content="Blog | Markconfig" />
-      <meta property='og:url' content={`${HOST_NAME}${PATH_MENU.blog.root}/`} />
-      {/*Twitter conf */}
-      <meta name='twitter:card' content='summary' />
-      <meta name='twitter:url' content={`${HOST_NAME}${PATH_MENU.blog.root}/`} />
-      <meta name='twitter:description' content={blogDescription} />
-      <meta name='twitter:creator' content='@Markconfig' />
-      {/* <meta property="twitter:image" content={postInfo.cover} /> */}
-      <meta property="twitter:title" content={blogTitle} />
-    </>
-  )
+  // const generateMetaInfo = () => (
+  //   <>
+
+
+  //     {/* http://ogp.me/ */}
+
+  //     {/*Twitter conf */}
+  //     {/* <meta property="twitter:image" content={postInfo.cover} /> */}
+
+
+  //     <meta name="description" content={blogDescription} />
+  //     <meta name="author" content="@markconfig" />
+  //     <meta name="keywords" content={'Blog, Markconfig, Articulos, Entretenimiento, Poesía, Reflexión'} />
+  //     {/* Og properties */}
+  //     {/* En esta etiqueta se tiene que editar la url de la imagen haciendoa coincidir con el host*/}
+  //     <meta property="og:image" content={`${HOST_NAME}/logo/og/markconfig.png`} />
+  //     <meta property="og:description" content={blogDescription} />
+  //     <meta property="og:type" content='website' />
+  //     <meta property="og:title" content={blogTitle} />
+  //     <meta property="og:site_name" content="Blog | Markconfig" />
+  //     <meta property='og:url' content={`${HOST_NAME}${PATH_MENU.blog.root}/`} />
+  //     <meta property='og:image:alt' content='Logotipo Markconfig blog' />
+
+  //     {/*Twitter conf */}
+  //     <meta name='twitter:card' content='summary' />
+  //     <meta name='twitter:url' content={`${HOST_NAME}${PATH_MENU.blog.root}/`} />
+  //     <meta property="twitter:title" content={blogTitle} />
+  //     <meta name='twitter:description' content={blogDescription} />
+  //     <meta name='twitter:creator' content='@Markconfig' />
+  //     {/*         En esta etiqueta se tiene que editar la url de la imagen haciendoa coincidir con el host*/}
+  //     <meta property="twitter:image" content={`${HOST_NAME}/logo/og/markconfig.png`} />
+  //   </>
+  // )
 
   return (
-    <Page title="Markconfig Blog" meta={generateMetaInfo()} >
+    <Page title="Markconfig Blog" meta={<MetaTag page='blogHome' />} >
       <RootStyle>
         <ContentStyle>
           <Container maxWidth={themeStretch ? false : 'lg'}>

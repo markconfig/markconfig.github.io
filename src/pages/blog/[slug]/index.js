@@ -25,7 +25,7 @@ import {
   // BlogPostCommentForm,
 } from '../../../sections/blog';
 
-import { HOST_NAME, blogDescription } from '../../../config';
+import { HOST_NAME, blogDescription, META_TAGS } from '../../../config';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({
@@ -84,27 +84,27 @@ export default function BlogPost({ currentPost, latestPosts }) {
   //   }
   // }, [isMountedRef/*, title*/]);
 
-  const generateMetaInfo = (postInfo) => (
+  const generateMetaInfo = (postInfo, page) => (
     <>
-      <meta name="description" content={postInfo.description} />
-      <meta name="keywords" content={postInfo?.tags.map((tag) => tag)} />
-      {/* http://ogp.me/ */}
-      <meta property="og:image" content={postInfo.cover} />
-      <meta property="og:description" content={postInfo.description} />
-      <meta property="og:type" content={"article"} />
-      <meta property="og:title" content={postInfo.title} />
-      <meta property="og:site_name" content="Blog | Markconfig" />
-      <meta property='og:url' content={`${HOST_NAME}${PATH_MENU.blog.root}/`} />
+      <meta name="description" content={postInfo.description} key={META_TAGS.description.key} />
+      <meta name="author" content={META_TAGS.author[page]} key={META_TAGS.author.key} />
+      <meta name="keywords" content={postInfo?.tags.map((tag) => tag)} key={META_TAGS.keywords.key} />
+      {/* Og properties */}
+      <meta property="og:image" content={postInfo.cover} key={META_TAGS.og.image.key} />
+      <meta property="og:description" content={postInfo.description} key={META_TAGS.og.description.key} />
+      <meta property="og:type" content={"article"} key={META_TAGS.og.type.key} />
+      <meta property="og:title" content={postInfo.title} key={META_TAGS.og.title.key} />
+      <meta property="og:site_name" content={`${postInfo.title} - Blog | Markconfig`} key={META_TAGS.og.siteName.key} />
+      <meta property='og:url' content={META_TAGS.og.url[page]} key={META_TAGS.og.url.key} />
       <meta property='og:image:alt' content={postInfo.altCover} />
       {/*Twitter conf */}
-      <meta name='twitter:card' content='summary' />
-      <meta name='twitter:url' content={`${HOST_NAME}${PATH_MENU.blog.root}/`} />
-      <meta name='twitter:description' content={postInfo.description} />
-      <meta name='twitter:creator' content='@Markconfig' />
-      <meta property="twitter:image" content={postInfo.cover} />
-      <meta property="twitter:title" content={postInfo.title} />
-      {/* <meta property="og:image:width" content="{{ page.image.width }}" />
-        <meta property="og:image:height" content="{{ page.image.height }}" /> */}
+      <meta name='twitter:card' content={META_TAGS.tw.card[page]} key={META_TAGS.tw.card.key} />
+      <meta name='twitter:url' content={META_TAGS.tw.url[page]} key={META_TAGS.tw.url.key} />
+      <meta property="twitter:title" content={postInfo.title} key={META_TAGS.tw.title.key} />
+      <meta name='twitter:description' content={postInfo.description} key={META_TAGS.tw.description.key} />
+      <meta name='twitter:creator' content={META_TAGS.tw.creator[page]} key={META_TAGS.tw.creator.key} />
+      {/*         En esta etiqueta se tiene que editar la url de la imagen haciendoa coincidir con el host*/}
+      <meta property="twitter:image" content={postInfo.cover} key={META_TAGS.tw.image.key} />
     </>
   );
 
@@ -135,7 +135,7 @@ export default function BlogPost({ currentPost, latestPosts }) {
 
   return (
     // <Page title="Blog: Post Details">
-    <Page title={post ? post.title : 'blog'} meta={generateMetaInfo(currentPost)} >
+    <Page title={post ? post.title + " - Blog" : 'blog'} meta={generateMetaInfo(currentPost, 'blogHome')} >
       <RootStyle>
         <ContentStyle>
           <Container maxWidth={themeStretch ? false : 'lg'}>

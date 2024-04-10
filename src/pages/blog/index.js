@@ -125,7 +125,7 @@ export default function BlogPosts({ AllPosts }) {
   );
 
   return (
-    <Page title="Markconfig Blog"
+    <Page title="Blog"
       meta={generateMetaInfo('blogHome')}
     >
       <RootStyle>

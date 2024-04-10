@@ -47,7 +47,7 @@ export const defaultSettings = {
 export const HOST_NAME = process.env.HOST_NAME;
 //For meta tags open graph
 const blogDescription = 'Un pequeño blog, en donde se habla de lo que sea';
-const blogTitle = 'Markconfig blog';
+const blogTitle = 'Blog';
 const homeTitle = 'Markconfig - Desarrollador de software, Java, Spring Boot, React, NextJs, Javascript, MySQL, Arduino';
 const homeDescription = 'Sitio web, portafolio, contacto y blog de Markconfig';
 const author = '@markconfig'

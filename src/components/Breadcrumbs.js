@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import NextLink from 'next/link';
 // @mui
 import { Box, Link, Typography, Breadcrumbs as MUIBreadcrumbs } from '@mui/material';
-
+import uuidv4 from '../utils/uuidv4';
 // ----------------------------------------------------------------------
 
 Breadcrumbs.propTypes = {
@@ -17,7 +17,7 @@ export default function Breadcrumbs({ links, activeLast = false, ...other }) {
   const listDefault = links.map((link) => <LinkItem key={link.name} link={link} />);
 
   const listActiveLast = links.map((link) => (
-    <div key={link.name}>
+    <div key={link.name+uuidv4()}>
       {link.name !== currentLink ? (
         <LinkItem link={link} />
       ) : (
@@ -60,7 +60,7 @@ LinkItem.propTypes = {
 function LinkItem({ link }) {
   const { href = '', name, icon } = link;
   return (
-    <NextLink href={href} passHref>
+    <NextLink legacyBehavior href={href} passHref>
       <Link
         key={name}
         variant="body2"

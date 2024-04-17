@@ -1,6 +1,7 @@
-import 'emoji-mart/css/emoji-mart.css';
+// Considear que los estilos ya se pueden exportar desde emoji-mart com ocomponente
+// import 'emoji-mart/css/emoji-mart.css';
 import PropTypes from 'prop-types';
-import { Picker } from 'emoji-mart';
+import { Picker} from 'emoji-mart';
 import { useState } from 'react';
 // @mui
 import { useTheme, styled } from '@mui/material/styles';

@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { m } from 'framer-motion';
 // @mui
-import { alpha, useTheme, styled } from '@mui/material/styles';
-import { Box, Button, Card, DialogTitle, Link, Container, Typography } from '@mui/material';
+import { alpha, /*useTheme,*/ styled } from '@mui/material/styles';
+import { Box, Button, Card, DialogTitle, Container, Typography } from '@mui/material';
 // components
 import Image from '../../components/Image';
 import { MotionViewport, varFade, DialogAnimate } from '../../components/animate';
@@ -124,9 +124,9 @@ export default function HomePortfolio() {
   const [isOpenPortfolioDetails, setIsOpenPortfolioDetails] = useState(false);
   const [details, setDetails] = useState(null);
 
-  const theme = useTheme();
+  // const theme = useTheme();
 
-  const isLight = theme.palette.mode === 'light';
+  // const isLight = theme.palette.mode === 'light';
 
   const handleOpenCardDetails = (details) => {
     setIsOpenPortfolioDetails(true);

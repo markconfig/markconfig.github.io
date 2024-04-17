@@ -109,7 +109,7 @@ function IconBullet({ type = 'item' }) {
 // ----------------------------------------------------------------------
 
 MenuDesktopItem.propTypes = {
-  isHome: PropTypes.bool,
+  // isHome: PropTypes.bool,
   isOffset: PropTypes.bool,
   isOpen: PropTypes.bool,
   onClose: PropTypes.func,
@@ -121,12 +121,12 @@ MenuDesktopItem.propTypes = {
   }),
 };
 
-function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
-  const { pathname } = useRouter();
+function MenuDesktopItem({ item, /*isHome,*/ isOpen, isOffset, onOpen, onClose }) {
+  const {/*pathname,*/ asPath } = useRouter();
 
   const { title, path, children } = item;
 
-  const isActive = (path) => pathname === path;
+  const isActive = (path) =>/*pathname*/ asPath === path;
 
   if (children) {
     return (
@@ -191,7 +191,7 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
                     </ListSubheader>
 
                     {items.map((item) => (
-                      <NextLink key={item.title} href={item.path} passHref>
+                      <NextLink legacyBehavior key={item.title} href={item.path} passHref>
                         <ListItemStyle
                           underline="none"
                           sx={{
@@ -258,7 +258,7 @@ function MenuDesktopItem({ item, isHome, isOpen, isOffset, onOpen, onClose }) {
   }
 
   return (
-    <NextLink href={path} passHref>
+    <NextLink legacyBehavior href={path} passHref>
       <LinkStyle
         sx={{
           // ...(isHome && { color: 'common.white' }),

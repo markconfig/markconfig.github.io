@@ -29,7 +29,7 @@ export const NavItemRoot = forwardRef(({ item, active, open, onMouseEnter, onMou
       <NavItemContent icon={icon} title={title} children={children} />
     </ListItemStyle>
   ) : (
-    <NextLink href={path} passHref>
+    <NextLink legacyBehavior href={path} passHref>
       <ListItemStyle activeRoot={active}>
         <NavItemContent icon={icon} title={title} children={children} />
       </ListItemStyle>
@@ -76,7 +76,7 @@ export const NavItemSub = forwardRef(({ item, active, open, onMouseEnter, onMous
       <NavItemContent icon={icon} title={title} children={children} subItem />
     </ListItemStyle>
   ) : (
-    <NextLink href={path} passHref>
+    <NextLink legacyBehavior href={path} passHref>
       <ListItemStyle disableRipple activeSub={active} subItem>
         <NavItemContent icon={icon} title={title} children={children} subItem />
       </ListItemStyle>

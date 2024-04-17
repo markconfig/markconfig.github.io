@@ -102,7 +102,7 @@ const components = {
     props.href.includes('http') ? (
       <Link target="_blank" rel="noopener" {...props} />
     ) : (
-      <NextLink href={props.href} passHref>
+      <NextLink legacyBehavior href={props.href} passHref>
         <Link {...props}>{props.children}</Link>
       </NextLink>
     ),

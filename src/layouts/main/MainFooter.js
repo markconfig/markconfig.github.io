@@ -4,7 +4,7 @@ import NextLink from 'next/link';
 import { styled } from '@mui/material/styles';
 import { Grid, Link, Divider, Container, Typography, Stack } from '@mui/material';
 // routes
-import { PATH_PAGE, PATH_SOCIAL_NETWORK } from '../../routes/paths';
+import { PATH_SOCIAL_NETWORK } from '../../routes/paths';
 // components
 import Logo from '../../components/Logo';
 import SocialsButton from '../../components/SocialsButton';
@@ -38,7 +38,7 @@ const LINKS = [
   {
     headline: 'Otos sitios',
     children: [
-      { name: 'Mi blog', href: PATH_SOCIAL_NETWORK.myBlog },
+      { name: 'Mi blog', href: PATH_SOCIAL_NETWORK.blog },
     ],
   },
   {
@@ -88,7 +88,7 @@ export default function MainFooter() {
             <Logo sx={{ mx: { xs: 'auto', md: 'inherit' } }} />
           </Grid>
           <Grid item xs={8} md={3}>
-            <Typography variant="body2" sx={{ pr: { md: 5 } }}>
+            <Typography key='textDescripcionFooter' variant="body2" sx={{ pr: { md: 5 } }}>
               {/* The starting point for your next project with Minimal UI Kit, built on the newest
               version of Material-UI ©, ready to be customized to your style. */}
               Markconfig es una página web en donde expongo mi portafolio e información sobre mí.
@@ -111,19 +111,19 @@ export default function MainFooter() {
               direction={{ xs: 'column', md: 'row' }}
               justifyContent="space-between"
             >
-              {LINKS.map((list) => (
-                <Stack key={list.headline} spacing={2}>
-                  <Typography component="p" variant="overline">
+              {LINKS.map((list, index) => (
+                <Stack key={`${list.headline}${index}`} spacing={2}>
+                  <Typography key={`${list.headline}`} component="p" variant="overline">
                     {list.headline}
                   </Typography>
-                  {list.children.map((link) => (
+                  {list.children.map((link, index) => (
                     link.type ? (
-                      <Typography color="inherit" variant="body2" sx={{ display: 'block' }}>
+                      <Typography key={`${index.name}${index}`} color="inherit" variant="body2" sx={{ display: 'block' }}>
                         {link.name}
                       </Typography>
                     ) : (
-                      <NextLink key={link.name} href={link.href} passHref>
-                        <Link color="inherit" target={link.target || '_blank'} variant="body2" sx={{ display: 'block' }}>
+                      <NextLink legacyBehavior key={link.name} href={link.href} passHref>
+                        <Link key={`${index.name}${index}`} color="inherit" target={link.target || '_blank'} variant="body2" sx={{ display: 'block' }}>
                           {link.name}
                         </Link>
                       </NextLink>

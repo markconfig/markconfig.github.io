@@ -53,7 +53,7 @@ export function NavItemRoot({ item, isCollapse, open = false, active, onOpen }) 
       {renderContent}
     </ListItemStyle>
   ) : (
-    <NextLink href={path} passHref>
+    <NextLink legacyBehavior href={path} passHref>
       <ListItemStyle activeRoot={active}>{renderContent}</ListItemStyle>
     </NextLink>
   );
@@ -98,7 +98,7 @@ export function NavItemSub({ item, open = false, active = false, onOpen }) {
       {renderContent}
     </ListItemStyle>
   ) : (
-    <NextLink href={path} passHref>
+    <NextLink legacyBehavior href={path} passHref>
       <ListItemStyle activeSub={active} subItem>
         {renderContent}
       </ListItemStyle>

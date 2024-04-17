@@ -1,19 +1,17 @@
 import PropTypes from 'prop-types';
-// guards
-import AuthGuard from '../guards/AuthGuard';
 // components
 import MainLayout from './main';
-import DashboardLayout from './dashboard';
-import LogoOnlyLayout from './LogoOnlyLayout';
+import LogoOnlyLayout from './LogoLargeOnlyLayout';
+import LogoLargeOnlyLayout from './LogoLargeOnlyLayout';
 
 // ----------------------------------------------------------------------
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
-  variant: PropTypes.oneOf(['dashboard', 'main', 'logoOnly']),
+  variant: PropTypes.oneOf(['main', 'logoOnly']),
 };
 
-export default function Layout({ variant = 'dashboard', children }) {
+export default function Layout({ variant = 'logoOnly', children }) {
   if (variant === 'logoOnly') {
     return <LogoOnlyLayout> {children} </LogoOnlyLayout>;
   }
@@ -23,8 +21,6 @@ export default function Layout({ variant = 'dashboard', children }) {
   }
 
   return (
-    <AuthGuard>
-      <DashboardLayout> {children} </DashboardLayout>
-    </AuthGuard>
+    <LogoLargeOnlyLayout> {children} </LogoLargeOnlyLayout>
   );
 }

@@ -18,7 +18,7 @@ import HeaderBreadcrumbs from '../../components/HeaderBreadcrumbs';
 import { BlogPostCard, BlogPostsSort, /*BlogPostsSearch*/ } from '../../sections/blog';
 //api blogs
 import { getAllPosts } from '../../utils/lib/api';
-import { HOST_NAME, blogDescription, blogTitle, META_TAGS } from '../../config';
+import { META_TAGS } from '../../config';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({

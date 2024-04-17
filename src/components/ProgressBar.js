@@ -11,7 +11,6 @@ import GlobalStyles from '@mui/material/GlobalStyles';
 export default function ProgressBar() {
   const theme = useTheme();
   const router = useRouter();
-  console.log(router);
 
   NProgress.configure({ showSpinner: false });
 

@@ -40,7 +40,7 @@ const generateMetaInfo = (page) => (
     <meta property="og:title" content={META_TAGS.og.title[page]} key={META_TAGS.og.title.key} />
     <meta property="og:site_name" content={META_TAGS.og.siteName[page]} key={META_TAGS.og.siteName.key} />
     <meta property='og:url' content={META_TAGS.og.url[page]} key={META_TAGS.og.url.key} />
-    <meta property='og:image:alt' content={META_TAGS.og.imageAlt[page]} />
+    <meta property='og:image:alt' content={META_TAGS.og.imageAlt[page]} key={META_TAGS.og.imageAlt}/>
     {/*Twitter conf */}
     <meta name='twitter:card' content={META_TAGS.tw.card[page]} key={META_TAGS.tw.card.key} />
     <meta name='twitter:url' content={META_TAGS.tw.url[page]} key={META_TAGS.tw.url.key} />

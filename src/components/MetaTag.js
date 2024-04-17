@@ -2,7 +2,6 @@
 //pero no fue posible, por lo este codigo se repite en cada tipo de pantalla (Inicio, lista de post, post)
 import PropTypes from 'prop-types';
 import { META_TAGS } from "../config";
-import { useState, useEffect } from 'react';
 
 MetaTag.propTypes = {
   page: PropTypes.oneOf([

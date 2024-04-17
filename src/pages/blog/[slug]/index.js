@@ -25,7 +25,7 @@ import {
   // BlogPostCommentForm,
 } from '../../../sections/blog';
 
-import { HOST_NAME, blogDescription, META_TAGS } from '../../../config';
+import { blogDescription, META_TAGS } from '../../../config';
 // ----------------------------------------------------------------------
 
 const RootStyle = styled('div')(({ theme }) => ({

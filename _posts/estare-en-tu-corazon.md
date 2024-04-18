@@ -1,6 +1,6 @@
 ---
 id: "e91f09a7-dd88-49d5-b1c8-1daf80d2d7b1"
-cover: "https://markconfig.github.io/blog/images/post/estareentucorazon.jpg"
+cover: "https://markconfig.github.io/blog/images/post/estareentucorazon.webp"
 altCover: "Iglesia de Acatlan de Osorio"
 title: ¿Estaré en tu corazón? 🫀🌻
 description: "No me veas, me siento amado, no me beses, me siento derrotado"
@@ -56,6 +56,6 @@ Amor, no desistiré
 
 ***
 
-![Iglesia de Acatlan de Osorio](https://markconfig.github.io/blog/images/post/estareentucorazon.jpg)
+![Iglesia de Acatlan de Osorio](https://markconfig.github.io/blog/images/post/estareentucorazon.webp)
 
 ***

@@ -90,31 +90,6 @@ const CardStyle = styled(Card)(({ theme }) => {
         boxShadow: `-20px 20px 40px 0 ${shadowCard(0.12)}`,
       },
     },
-    // '&.cardLeft': {
-    //   [theme.breakpoints.up('md')]: { marginTop: -40 },
-    // },
-    // '&.cardCenter': {
-    //   [theme.breakpoints.up('md')]: {
-    //     marginTop: -80,
-    //     backgroundColor: theme.palette.background.paper,
-    //     boxShadow: `-40px 40px 80px 0 ${shadowCard(0.4)}`,
-    //     '&:before': {
-    //       top: 0,
-    //       left: 0,
-    //       right: 0,
-    //       bottom: 0,
-    //       zIndex: -1,
-    //       content: "''",
-    //       margin: 'auto',
-    //       position: 'absolute',
-    //       width: 'calc(100% - 40px)',
-    //       height: 'calc(100% - 40px)',
-    //       borderRadius: Number(theme.shape.borderRadius) * 2,
-    //       backgroundColor: theme.palette.background.paper,
-    //       boxShadow: `-20px 20px 40px 0 ${shadowCard(0.12)}`,
-    //     },
-    //   },
-    // },
   };
 });
 
@@ -123,10 +98,6 @@ const CardStyle = styled(Card)(({ theme }) => {
 export default function HomePortfolio() {
   const [isOpenPortfolioDetails, setIsOpenPortfolioDetails] = useState(false);
   const [details, setDetails] = useState(null);
-
-  // const theme = useTheme();
-
-  // const isLight = theme.palette.mode === 'light';
 
   const handleOpenCardDetails = (details) => {
     setIsOpenPortfolioDetails(true);
@@ -142,10 +113,6 @@ export default function HomePortfolio() {
     <RootStyle id={'portfolio'}>
       <Container component={MotionViewport} pb={3}>
         <Box
-          // sx={{
-          //   textAlign: 'center',
-          //   mb: { xs: 10, md: 25 },
-          // }}
           sx={{
             textAlign: 'center',
             mb: { xs: 10, md: 15 },
@@ -196,21 +163,10 @@ export default function HomePortfolio() {
                 <Typography variant="h5" paragraph>
                   {card.title}
                 </Typography>
-                {/* {
-                  card.links && card.links.map((link, index) => {
-                    const { name, url } = link;
-                    return (
-                      <Typography variant='body2'>
-                        <Link color="inherit" target='_blank' href={url}>{name}</Link >
-                      </Typography>
-                    )
-                  })
-                } */}
                 <TechnologiesIcon initialColor={false} simple={true} visibleTechnologies={card.technologies} />
                 <Button variant="text" color="primary" onClick={() => handleOpenCardDetails(card)}>
                   Ver más...
                 </Button>
-                {/* <Typography sx={{ color: isLight ? 'text.secondary' : 'common.white' }}>{card.description}</Typography> */}
               </CardStyle>
             </m.div>
           ))}

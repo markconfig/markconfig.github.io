@@ -10,7 +10,6 @@ import createEmotionServer from '@emotion/server/create-instance';
 // theme
 // import palette from '../theme/palette';
 import getColorPresets from '../utils/getColorPresets';
-import { HOST_NAME } from '../config';
 // ----------------------------------------------------------------------
 
 function createEmotionCache() {
@@ -23,21 +22,17 @@ export default class MyDocument extends Document {
       <Html lang="es">
         <Head>
           <meta charSet="utf-8" />
-     
+
           {/* PWA head meta */}
           <meta name='application-name' content='Markconfig' />
           <meta name='apple-mobile-web-app-capable' content='yes' />
           <meta name='apple-mobile-web-app-status-bar-style' content='default' />
           <meta name='apple-mobile-web-app-title' content='Markconfig' />
-          {/* <meta name='description' content='Sitio web, portafolio, contacto y blog de Markconfig' /> */}
           <meta name='format-detection' content='telephone=no' />
           <meta name='mobile-web-app-capable' content='yes' />
 
           {/* Favicon */}
           <link rel="icon" type="image/svg" href="/logo/markconfigIcon.svg" />
-          {/* <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon-32x32.png" />
-          <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon-16x16.png" /> */}
-
           {/* Apple */}
           <link rel="apple-touch-icon" sizes="57x57" href="/logo/apple/apple-icon-57x57.png" />
           <link rel="apple-touch-icon" sizes="72x72" href="/logo/apple/apple-icon-72x72.png" />

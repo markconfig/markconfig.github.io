@@ -119,12 +119,6 @@ export function PostContent({ slug, title, /*view, comment, share,*/ createdAt, 
   const latestPostLarge = index === 0;
   const latestPostSmall = index === 1 || index === 2;
 
-  // const POST_INFO = [
-  //   { number: comment, icon: 'eva:message-circle-fill' },
-  //   { number: view, icon: 'eva:eye-fill' },
-  //   { number: share, icon: 'eva:share-fill' },
-  // ];
-
   return (
     <CardContent
       sx={{
@@ -175,15 +169,6 @@ export function PostContent({ slug, title, /*view, comment, share,*/ createdAt, 
           }),
         }}
       >
-        {/* Component to show: comment view share */}
-        {/* {POST_INFO.map((info, index) => (
-          <TextIconLabel
-            key={index}
-            icon={<Iconify icon={info.icon} sx={{ width: 16, height: 16, mr: 0.5 }} />}
-            value={fShortenNumber(info.number)}
-            sx={{ typography: 'caption', ml: index === 0 ? 0 : 1.5 }}
-          />
-        ))} */}
         <Typography
           gutterBottom
           variant="caption"

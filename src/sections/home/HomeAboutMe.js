@@ -41,30 +41,6 @@ const ScreenStyle = styled(m.div)(({ theme }) => ({
   },
 }));
 
-// const COMMON = {
-//   scaleX: 0.86,
-//   skewY: 8,
-//   skewX: 0,
-//   scaleY: 1,
-//   translateX: 0,
-//   translateY: 0,
-//   opacity: 0,
-// };
-
-
-// const variantScreenLeft = {
-//   initial: COMMON,
-//   animate: { ...COMMON, translateX: '-50%', translateY: 40, opacity: 1 },
-// };
-// const variantScreenCenter = {
-//   initial: COMMON,
-//   animate: { ...COMMON, opacity: 1 },
-// };
-// const variantScreenRight = {
-//   initial: COMMON,
-//   animate: { ...COMMON, translateX: '50%', translateY: -40, opacity: 1 },
-// };
-
 const variantScreenNormal = {
   initial: { opacity: 0, },
   animate: { translateX: '50%', opacity: 1 },
@@ -78,12 +54,6 @@ export default function HomeAboutMe() {
   const isLight = theme.palette.mode === 'light';
 
   const isRTL = theme.direction === 'rtl';
-
-  // const screenLeftAnimate = variantScreenLeft;
-
-  // const screenCenterAnimate = variantScreenCenter;
-
-  // const screenRightAnimate = variantScreenRight;
 
   const screenNormalAnimate = variantScreenNormal;
 
@@ -104,9 +74,6 @@ export default function HomeAboutMe() {
                 <Typography variant="h2" >
                   Sobre mí
                 </Typography>
-                {/* <Typography component="span" variant="h2" sx={{ color: 'primary.main', mb: 3  }}>
-                  Markconfig
-                </Typography> */}
               </m.div>
 
               <m.div variants={varFade().inUp}>
@@ -148,42 +115,6 @@ export default function HomeAboutMe() {
                 justifyContent: 'center',
               }}
             >
-              {/* {[...Array(3)].map((_, index) => (
-                <ScreenStyle
-                  key={index}
-                  variants={{
-                    ...(index === 0 && screenLeftAnimate),
-                    ...(index === 1 && screenCenterAnimate),
-                    ...(index === 2 && screenRightAnimate),
-                  }}
-                  transition={{ duration: 0.72, ease: 'easeOut' }}
-                  sx={{
-                    boxShadow: `${isRTL ? -80 : 80}px -40px 80px ${alpha(
-                      isLight ? theme.palette.grey[600] : theme.palette.common.black,
-                      0.48
-                    )}`,
-                    ...(index === 0 && {
-                      zIndex: 3,
-                      position: 'absolute',
-                    }),
-                    ...(index === 1 && { zIndex: 2 }),
-                    ...(index === 2 && {
-                      zIndex: 1,
-                      position: 'absolute',
-                      boxShadow: 'none',
-                    }),
-                  }}
-                >
-                  <Image
-                    disabledEffect
-                    alt={`screen ${index + 1}`}
-                    // src={`https://minimal-assets-api.vercel.app/assets/images/home/screen_${isLight ? 'light' : 'dark'
-                    //   }_${index + 1}.png`}
-                    src={`/images/screen_light_${index + 1}.png`}
-                  />
-                </ScreenStyle>
-              ))} */}
-
 
               <ScreenStyle
                 key={'screen-markconfig1'}

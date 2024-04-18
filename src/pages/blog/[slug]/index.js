@@ -20,9 +20,7 @@ import { SkeletonPost } from '../../../components/skeleton';
 import {
   BlogPostHero,
   BlogPostTags,
-  BlogPostRecent,
-  // BlogPostCommentList,
-  // BlogPostCommentForm,
+  BlogPostRecent
 } from '../../../sections/blog';
 
 import { blogDescription, META_TAGS } from '../../../config';
@@ -55,34 +53,12 @@ BlogPost.propTypes = {
 
 export default function BlogPost({ currentPost, latestPosts }) {
   const { themeStretch } = useSettings();
-  // const { query } = useRouter();
-
-  // const { title } = query;
 
   const [recentPosts, setRecentPosts] = useState(latestPosts);
 
   const [post, setPost] = useState(null);
 
   const [error, setError] = useState(null);
-
-  // const getPost = useCallback(async () => {
-  //   try {
-  //     // const response = await axios.get('/api/blog/post', {
-  //     //   params: { title },
-  //     // });
-
-  //     const response = getPostBySlug(params.slug);
-
-  //     if (isMountedRef.current) {
-  //       // setPost(response.data.post);
-  //        setPost(response);
-
-  //     }
-  //   } catch (error) {
-  //     console.error(error);
-  //     setError(error.message);
-  //   }
-  // }, [isMountedRef/*, title*/]);
   
   const generateMetaInfo = (postInfo, page) => (
     <>
@@ -107,25 +83,6 @@ export default function BlogPost({ currentPost, latestPosts }) {
       <meta property="twitter:image" content={postInfo.cover} key={META_TAGS.tw.image.key} />
     </>
   );
-
-  // const getRecentPosts = useCallback(async () => {
-  //   try {
-  //     const response = await axios.get('/api/blog/posts/recent', {
-  //       params: { currentPost/*title*/, },
-  //     });
-
-  //     if (isMountedRef.current) {
-  //       setRecentPosts(response.data.recentPosts);
-  //     }
-  //   } catch (error) {
-  //     console.error(error);
-  //   }
-  // }, [isMountedRef, /*title*/]);
-
-  // useEffect(() => {
-  //   getPost();
-  //   getRecentPosts();
-  // }, [getPost, getRecentPosts]);
 
   useEffect(() => {
     if (currentPost != undefined && currentPost != null) {
@@ -163,21 +120,6 @@ export default function BlogPost({ currentPost, latestPosts }) {
                     <BlogPostTags post={post} />
                     <Divider />
                   </Box>
-
-                  {/* <Box sx={{ display: 'flex', mb: 2 }}>
-                    <Typography variant="h4">Comments</Typography>
-                    <Typography variant="subtitle2" sx={{ color: 'text.disabled' }}>
-                      ({post.comments.length}) 
-                    </Typography>
-                  </Box> */}
-
-                  {/* <BlogPostCommentList post={post} /> */}
-
-                  {/* <Box sx={{ mb: 5, mt: 3, display: 'flex', justifyContent: 'flex-end' }}>
-                    <Pagination count={8} color="primary" />
-                  </Box>
-
-                  <BlogPostCommentForm /> */}
                 </Box>
               </Card>
             )}
@@ -202,15 +144,6 @@ export async function getStaticProps({ params }) {
     props: { currentPost: post, latestPosts: latestPosts },
   };
 }
-
-
-// export async function generateStaticParams() {
-//   const posts = getAllPosts();
-
-//   return posts.map((post) => ({
-//     slug: post.slug,
-//   }));
-// }
 
 export async function getStaticPaths() {
   const posts = getAllPosts();

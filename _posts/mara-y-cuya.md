@@ -1,6 +1,6 @@
 ---
 id: "e91f09a7-dd88-49d5-b1c8-1daf80c2d6b1"
-cover: "https://markconfig.github.io/blog/images/post/maracuya.jpg"
+cover: "https://markconfig.github.io/blog/images/post/maracuya.webp"
 altCover: "Imagen de una maracuya"
 title: Mara y Cuya 🌺🌸
 description: "Hazme llorar, hazme sonreír, hazme gritar, con todo el sentir"

@@ -69,19 +69,10 @@ const HeroImgStyle = styled(m.img)(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function HomeMarkconfig() {
-  // const theme = useTheme();
 
-  // const isLight = theme.palette.mode === 'light';
   return (
     <MotionContainer>
       <RootStyle>
-        {/* <HeroOverlayStyle
-          alt="overlay"
-          // src="https://minimal-assets-api.vercel.app/assets/overlay.svg"
-          src="/images/overlay_3."
-          variants={varFade().in}
-          
-        /> */}
 
         <HeroImgStyle
           alt="hero"
@@ -93,18 +84,11 @@ export default function HomeMarkconfig() {
         <Container>
           <ContentStyle>
             <m.div variants={varFade().inRight}>
-              {/* <Typography variant="h1" sx={{ color: 'common.white' }}>
-                Start a <br />
-                new project <br /> with
-                <Typography component="span" variant="h1" sx={{ color: 'primary.main' }}>
-                  &nbsp;Minimal
-                </Typography> */}
               <Typography component="span" variant="h1" sx={{ color: 'primary.main' }}>
                 Markconfig
               </Typography><br />
 
               <Typography variant="h1"
-              // sx={{ color: isLight === 'light' ? 'common.black' : 'common.white' }}
               >
                 Desarrollador<br />
                 De software
@@ -114,59 +98,10 @@ export default function HomeMarkconfig() {
 
             <m.div variants={varFade().inRight}>
               <Typography
-              // sx={{ color: 'text.white' }}
               >
                 Java, Spring Boot, React, NextJs, Javascript, MySQL, Arduino
               </Typography>
             </m.div>
-
-            {/* <Stack spacing={2.5} alignItems="center" direction={{ xs: 'column', md: 'row' }}>
-              <m.div variants={varFade().inRight}>
-                <TextIconLabel
-                  icon={
-                    <Image
-                      alt="sketch icon"
-                      src="https://minimal-assets-api.vercel.app/assets/images/home/ic_sketch_small.svg"
-                      sx={{ width: 20, height: 20, mr: 1 }}
-                    />
-                  }
-                  value={
-                    <Link
-                      href="https://www.sketch.com/s/76388a4d-d6e5-4b7f-8770-e5446bfa1268"
-                      target="_blank"
-                      rel="noopener"
-                      // color="common.white"
-                      sx={{ typography: 'body2' }}
-                    >
-                      Preview Sketch
-                    </Link>
-                  }
-                />
-              </m.div>
-
-              <m.div variants={varFade().inRight}>
-                <TextIconLabel
-                  icon={
-                    <Image
-                      alt="sketch icon"
-                      src="https://minimal-assets-api.vercel.app/assets/images/home/ic_figma_small.svg"
-                      sx={{ width: 20, height: 20, mr: 1 }}
-                    />
-                  }
-                  value={
-                    <Link
-                      href="https://www.figma.com/file/x7earqGD0VGFjFdk5v2DgZ/%5BPreview%5D-Minimal-Web?node-id=866%3A55474"
-                      target="_blank"
-                      rel="noopener"
-                      // color="common.white"
-                      sx={{ typography: 'body2' }}
-                    >
-                      Preview Figma
-                    </Link>
-                  }
-                />
-              </m.div>
-            </Stack> */}
 
             <m.div variants={varFade().inRight}>
               <NextLink href={PATH_MENU.aboutMe} passHref>
@@ -181,20 +116,8 @@ export default function HomeMarkconfig() {
             </m.div>
 
             <Stack spacing={2.5}>
-              {/* <m.div variants={varFade().inRight}>
-                <Typography variant="overline" sx={{ color: 'primary.light' }}>
-                  Available For
-                </Typography>
-              </m.div> */}
 
               <Stack direction="row" spacing={1.5} justifyContent={{ xs: 'center', md: 'flex-start' }}>
-                {/* {['ic_sketch', 'ic_figma', 'ic_js', 'ic_ts', 'ic_nextjs'].map((resource) => (
-                  <m.img
-                    key={resource}
-                    variants={varFade().inRight}
-                    src={`https://minimal-assets-api.vercel.app/assets/images/home/${resource}.svg`}
-                  />
-                ))} */}
 
                 <SocialsButton initialColor={true} simple={true} links={PATH_SOCIAL_NETWORK} sx={{ mx: 0.5 }} />
               </Stack>

@@ -1,7 +1,7 @@
 ---
 
 id: "e19f09a7-dd58-49d5-b9c8-1daf89c2d7b1"
-cover: "https://markconfig.github.io/blog/images/post/ohpadre.jpg"
+cover: "https://markconfig.github.io/blog/images/post/ohpadre.webp"
 altCover: "Fotografia de markconfig"
 title: ¡Oh Padre! 💐
 description: "Agradecido estoy, por el don de la vida, sin ti no puedo ser, lo que hoy en día soy"
@@ -84,6 +84,6 @@ Del camino lleno de suspiros
 
 ***
 
-![Fotografia de markconfig](https://markconfig.github.io/blog/images/post/ohpadre.jpg)
+![Fotografia de markconfig](https://markconfig.github.io/blog/images/post/ohpadre.webp)
 
 ***

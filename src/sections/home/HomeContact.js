@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { m } from 'framer-motion';
 // @mui
-import { /*useTheme,*/ styled } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import { Box, Card, Link, Stack, Button, Divider, Container, Typography } from '@mui/material';
 // components
 import Image from '../../components/Image';
@@ -21,10 +21,6 @@ const RootStyle = styled('div')(({ theme }) => ({
 // ----------------------------------------------------------------------
 
 export default function HomeContact() {
-  // const theme = useTheme();
-
-  // const isLight = theme.palette.mode === 'light';
-
   return (
     <RootStyle id={'contact'}>
       <Container component={MotionViewport}>
@@ -39,15 +35,7 @@ export default function HomeContact() {
               Contacto
             </Typography>
           </m.div>
-          <m.div variants={varFade().inDown}>
-            {/* <Typography
-              sx={{
-                color: isLight ? 'text.secondary' : 'text.primary',
-              }}
-            >
-              
-            </Typography> */}
-          </m.div>
+          <m.div variants={varFade().inDown}/>
         </Box>
 
         <m.div variants={varFade().in}>
@@ -66,7 +54,6 @@ export default function HomeContact() {
               <Button
                 size="large"
                 variant="contained"
-                // href="mailto:support@minimals.cc?subject=[Feedback] from Customer"
                 href="mailto:markconfig.dev@gmail.com"
               >
                 markconfig.dev@gmail.com

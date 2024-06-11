@@ -14,11 +14,11 @@ export const PATH_MENU = {
 }
 // ----------------------------------------------------------------------
 export const PATH_SOCIAL_NETWORK = {
-  telegram: 'https://www.telegram.com/markconfig',
+  telegram: 'https://t.me/markconfig',
   x: 'https://www.twitter.com/markconfig',
   twitter: 'https://www.twitter.com/markconfig',
   github: 'https://www.github.com/markconfig',
-  linkedin: 'https://www.linkedin.com/in/marcos-cruz-reyes-7b1031178',
+  linkedin: 'https://www.linkedin.com/in/markconfig',
   instagram: 'https://www.instagram.com/markconfig',
   facebook: 'https://www.facebook.com/markconfig.dev',
   youtube: 'https://www.youtube.com/@markconfig/',

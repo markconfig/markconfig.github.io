@@ -85,9 +85,9 @@ export default function HomeAboutMe() {
                 >
                   Soy Marcos, Ingeniero Informático egresado del TecNM Campus Acatlán de Osorio, Puebla.
                   <br />
-                  He aplicando conocimiento que he adquirido durante mi formación profesional. He tenido experiencia comprobada en la creación y diseño de software. Me gustan los retos y aprender de este gran mundo tecnológico porque soy firme con mis desiciones.
+                  He aplicado conocimiento que he adquirido durante mi formación profesional. He tenido experiencia comprobada en la creación y diseño de software. Me gustan los retos y aprender de este gran mundo tecnológico porque soy firme con mis decisiones.
                   <br />
-                  He trabajado con las siguientes tecnologias, lenguajes, herramientas: Java (Principalmente), Spring Boot, Bases de datos con MySQL, React/NextJs, web (html, css yJavascript), PHP, Adobe Ilustrator, Domótica con Arduino, Linux, Despliegue de aplicaciones en VPS con la plataforma de Digital Ocean, etc.
+                  He trabajado con las siguientes tecnologías, lenguajes, herramientas: Java (Principalmente), Spring Boot, Bases de datos con MySQL, React/NextJs, web (html, css y Javascript), PHP, Adobe Ilustrator, Domótica con Arduino, Linux, Despliegue de aplicaciones en VPS con la plataforma de Digital Ocean, etc.
                 </Typography>
               </m.div>
 

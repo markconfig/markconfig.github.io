@@ -135,7 +135,7 @@ export default function HomeAboutMe() {
                 <Image
                   disabledEffect
                   alt={`Markconfig picture`}
-                  src={`/images/avatar-picture.webp`}
+                  src={`/images/markconfig_BW.jpg`}
                 />
               </ScreenStyle>
             </Box>

@@ -19,6 +19,7 @@ favoritePerson:
 comments:
 readingTime: 
   min: 3
+aspectRatioForBodyImage: "3/4"
 ---
 
 Un día normal  

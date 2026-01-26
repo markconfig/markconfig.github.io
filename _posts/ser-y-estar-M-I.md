@@ -18,6 +18,7 @@ favoritePerson:
 comments:
 readingTime: 
   min: 1
+aspectRatioForBodyImage: "3/4"
 ---
 
 Sería algo hermoso  
@@ -50,6 +51,6 @@ por solo ser 💞
 
 ***
 
-![Imagen del amor de mi vida](https://markconfig.github.io/blog/images/post/OjitosHermosos.jpg)
+![Imagen del amor de mi vida](https://markconfig.github.io/blog/images/post/ElAmordemivida.jpg)
 
 ***

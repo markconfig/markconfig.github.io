@@ -19,6 +19,7 @@ favoritePerson:
 comments:
 readingTime: 
   min: 1
+aspectRatioForBodyImage: "3/4"
 ---
 
 El ser de la persona sin el detalle

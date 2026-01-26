@@ -113,7 +113,7 @@ export default function BlogPost({ currentPost, latestPosts }) {
                     {post.description}
                   </Typography>
 
-                  <Markdown children={post.body} />
+                  <Markdown children={post.body} aspectRatioForBodyImage={post.aspectRatioForBodyImage}/>
 
                   <Box sx={{ my: 5 }}>
                     <Divider />

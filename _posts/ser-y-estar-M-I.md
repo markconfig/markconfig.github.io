@@ -2,7 +2,7 @@
 id: "f89f99a7-dd08-49d5-b1a8-1daf80c2d7z1"
 cover: "https://markconfig.github.io/blog/images/post/NuestroPrimerAtardecer.jpg"
 altCover: "El amor de mi vida"
-title: Ser y estar💞
+title: Ser y estar (M & I)💞
 description: "Somos todo ese conjunto de hermosas cosas"
 createdAt: '2026-01-24T23:59:16.308Z'
 view: 8903
@@ -50,6 +50,6 @@ por solo ser 💞
 
 ***
 
-![Imagen del amor de mi vida](https://markconfig.github.io/blog/images/post/ElAmordemivida.jpg)
+![Imagen del amor de mi vida](https://markconfig.github.io/blog/images/post/OjitosHermosos.jpg)
 
 ***

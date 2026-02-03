@@ -13,7 +13,7 @@ author:
   name: "Marcos CR"
   avatarUrl: 	"https://avatars.githubusercontent.com/u/43713105?v=4"
 tags:
-  ["amor", "atardecer", "nostalgia", "paz", "amor", "incondicional", "infinito", "presente"]
+  ["amor", "atardecer", "nostalgia", "paz", "incondicional", "infinito", "presente"]
 favoritePerson:
 comments:
 readingTime: 

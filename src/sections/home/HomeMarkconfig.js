@@ -119,7 +119,7 @@ export default function HomeMarkconfig() {
 
               <Stack direction="row" spacing={1.5} justifyContent={{ xs: 'center', md: 'flex-start' }}>
 
-                <SocialsButton initialColor={true} simple={true} links={PATH_SOCIAL_NETWORK} sx={{ mx: 0.5 }} />
+                {/* <SocialsButton initialColor={true} simple={true} links={PATH_SOCIAL_NETWORK} sx={{ mx: 0.5 }} /> */}
               </Stack>
             </Stack>
           </ContentStyle>

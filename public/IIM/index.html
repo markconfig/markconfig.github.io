@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Para mi Ivannita Hermosa - Felices 18</title>
+    <!-- Tipografías de Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@300;400;600&display=swap"
+        rel="stylesheet">
+
+    <style>
+        /* --- PALETA DE COLORES (LILA Y AZUL CIELO) --- */
+        :root {
+            --color-fondo: #f7f9fc;
+            --color-lila-principal: #9d8189;
+            --color-lila-suave: #d8e2dc;
+            --color-azul-cielo: #8ab6d6;
+            --color-purpura-acento: #6c5ce7;
+            --color-texto: #334155;
+            --fuente-titulo: 'Dancing Script', cursive;
+            --fuente-cuerpo: 'Montserrat', sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--color-fondo);
+            font-family: var(--fuente-cuerpo);
+            color: var(--color-texto);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        /* --- BARRA DE NAVEGACIÓN --- */
+        header {
+            background-color: rgba(255, 255, 255, 0.9);
+            backdrop-filter: blur(8px);
+            padding: 1rem 2rem;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(138, 182, 214, 0.15);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header h1 {
+            font-family: var(--fuente-titulo);
+            color: var(--color-purpura-acento);
+            font-size: 1.8rem;
+        }
+
+        header span {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--color-azul-cielo);
+        }
+
+        /* --- SECCIÓN HERO --- */
+        .hero {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(135deg, #e8eff9 0%, #e8dff5 50%, #f3e8f5 100%);
+            padding: 4rem 2rem 2rem 2rem;
+            margin-top: 60px;
+        }
+
+        /* Foto de Portada (Circular) */
+        .profile-img-container {
+            width: 180px;
+            height: 180px;
+            border-radius: 50%;
+            padding: 5px;
+            background: linear-gradient(45deg, var(--color-purpura-acento), var(--color-azul-cielo));
+            margin-bottom: 1.5rem;
+            box-shadow: 0 8px 20px rgba(108, 92, 231, 0.2);
+            opacity: 0;
+            animation: fadeInUp 1.5s forwards;
+        }
+
+        .profile-img-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 50%;
+        }
+
+        .hero h2 {
+            font-family: var(--fuente-titulo);
+            font-size: 3.8rem;
+            color: var(--color-purpura-acento);
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.05);
+            opacity: 0;
+            animation: fadeInUp 1.5s forwards 0.3s;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            color: var(--color-azul-cielo);
+            text-transform: uppercase;
+            opacity: 0;
+            animation: fadeInUp 1.5s forwards 0.6s;
+        }
+
+        .scroll-down {
+            margin-top: 2rem;
+            font-size: 2.2rem;
+            color: var(--color-azul-cielo);
+            animation: bounce 2s infinite;
+            cursor: pointer;
+        }
+
+        /* --- CONTENIDO PRINCIPAL --- */
+        .main-content {
+            max-width: 800px;
+            margin: 4rem auto;
+            padding: 0 2rem;
+        }
+
+        .letter-card {
+            background: white;
+            padding: 4rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 35px rgba(108, 92, 231, 0.08);
+            position: relative;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .letter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 45px rgba(138, 182, 214, 0.2);
+        }
+
+        .letter-card::before,
+        .letter-card::after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 80px;
+            border: 2px solid var(--color-azul-cielo);
+            border-radius: 12px;
+        }
+
+        .letter-card::before {
+            top: 20px;
+            left: 20px;
+            border-right: none;
+            border-bottom: none;
+        }
+
+        .letter-card::after {
+            bottom: 20px;
+            right: 20px;
+            border-left: none;
+            border-top: none;
+        }
+
+        .main-content p {
+            margin-bottom: 1.5rem;
+            font-size: 1.05rem;
+            text-align: justify;
+        }
+
+        .highlight {
+            color: var(--color-purpura-acento);
+            font-weight: 600;
+        }
+
+        .romantic-phrase {
+            font-family: var(--fuente-titulo);
+            font-size: 2.3rem;
+            background: linear-gradient(45deg, #6c5ce7, #8ab6d6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            text-align: center;
+            margin: 3rem 0;
+            line-height: 1.3;
+        }
+
+        /* Estilo para imágenes dentro de la carta */
+        .inline-image {
+            width: 100%;
+            max-height: 400px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Galería de fotos al final */
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin: 2.5rem 0;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 12px;
+            transition: transform 0.3s ease;
+        }
+
+        .photo-gallery img:hover {
+            transform: scale(1.03);
+        }
+
+        .signature {
+            text-align: right;
+            font-family: var(--fuente-titulo);
+            font-size: 2.8rem;
+            color: var(--color-purpura-acento);
+            margin-top: 3rem;
+        }
+
+        /* --- FOOTER --- */
+        footer {
+            text-align: center;
+            padding: 3rem;
+            background-color: white;
+            border-top: 1px solid #e2e8f0;
+        }
+
+        footer p {
+            font-size: 0.95rem;
+            color: #64748b;
+        }
+
+        .heart-icon {
+            color: #a29bfe;
+            animation: beat 1.2s infinite;
+            display: inline-block;
+        }
+
+        /* --- ANIMACIONES --- */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            20%,
+            50%,
+            80%,
+            100% {
+                transform: translateY(0);
+            }
+
+            40% {
+                transform: translateY(-10px);
+            }
+
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        @keyframes beat {
+            0% {
+                transform: scale(1);
+            }
+
+            50% {
+                transform: scale(1.2);
+            }
+
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .hero h2 {
+                font-size: 2.5rem;
+            }
+
+            .letter-card {
+                padding: 2rem;
+            }
+
+            .romantic-phrase {
+                font-size: 1.8rem;
+            }
+
+            .letter-card::before,
+            .letter-card::after {
+                width: 40px;
+                height: 40px;
+            }
+
+            .photo-gallery {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Barra de Navegación -->
+    <header>
+        <h1>🎂</h1>
+        <span>Un día inolvidable</span>
+    </header>
+
+    <!-- Portada con Imagen Principal -->
+    <section class="hero">
+        <!-- FOTO 1: Portada (Sustituye la URL por la tuya) -->
+        <div class="profile-img-container">
+            <img src="profile.jpeg" alt="Ivannita">
+        </div>
+        <h2>Felices 18 años, Ivannita</h2>
+        <p>18 primaveras, 18 vueltas al mundo</p>
+        <div class="scroll-down">↓</div>
+    </section>
+
+    <!-- Cuerpo de la Carta -->
+    <main class="main-content">
+        <article class="letter-card">
+
+            <p>Hoy es un día muy especial y no sabes con qué emoción esperé este día. Jamás había anhelado que llegara
+                un día tan especial como un cumpleaños por alguien y te preguntarás, ¿Por qué es tan especial /
+                importante?</p>
+
+            <p>En primera porque es el <span class="highlight">primer cumpleaños tuyo que lo pasamos como novios</span>,
+                la primera de muchas claro, y es emocionante y me conmueve de verdad cómo cada vez más estamos
+                involucrados en la vida del otro, tú en mi vida y yo en la tuya, que con cada día que pasa nos vamos
+                conociendo más, lo bueno y lo malo, lo feliz y lo triste, lo emocionante y lo aburrido.</p>
+
+            <div class="romantic-phrase">"Me conmueve cómo cada vez estamos más involucrados en la vida del otro."</div>
+
+            <!-- FOTO 2: En medio de la carta (Sustituye la URL por la tuya) -->
+            <img src="NosotrosJuntos.jpeg" alt="Nosotros juntos" class="inline-image">
+
+            <p>Otra razón es porque cumples <span class="highlight">18 años mi amor</span>, como te platicaba siento que
+                es uno de los cumpleaños más importantes, porque te conviertes en ciudadana oficialmente, así como hay
+                cosas buenas también hay obligaciones y deberes. Siento que es como si fuera los 15 años pero más
+                importante, más significativo.</p>
+
+            <p>Otra razón más, es porque en este año, a esta edad, tomas muchas decisiones importantes que poco a poco
+                van forjando tu carácter, es difícil y puede provocar miedo, pero es una etapa que todos en algún
+                momento deben de pasar.</p>
+
+            <p>Otra razón más, es porque eres importante para mí. A lo mejor estoy intentando justificar lo especial que
+                es para mí con diferentes motivos pero siento que la más fuerte es <span class="highlight">porque me
+                    importas</span>, me importa todo lo que te suceda, todo lo que te afecte.</p>
+
+            <div class="romantic-phrase">"Te amo infinitamente, mi siempre bella Ivannita."</div>
+
+            <p>Quiero decirte que me llenas de orgullo por el simple hecho de día a día no rendirte. Fíjate metas,
+                fáciles, difíciles, emocionantes, ve por ti y por los tuyos, ¡claro!, pero siempre luchando tus sueños y
+                metas.</p>
+
+            <p>Sabes muy bien que cuentas conmigo para lo que sea, siempre será para mí un placer poder ayudarte y
+                gracias de verdad por tomarme en cuenta en tus decisiones, en tu día a día, en tu vida.</p>
+
+            <p>Eres una niña muy bonita, guapísima, bella, hermosa y jamás me cansaré de decírtelo. Me encanta todo de
+                ti, desde tus bonitos sentimientos hasta lo bella que eres. <span class="highlight">Eres una
+                    diosa</span> como siempre te digo, mi diosa.</p>
+
+            <!-- FOTOS 3, 4 y 5: Galería al final de la carta -->
+            <div class="photo-gallery">
+                <img src="Recuerdo1.jpeg" alt="Recuerdo1">
+                <img src="Recuerdo2.jpeg" alt="Recuerdo2">
+                <img src="Recuerdo3.jpeg" alt="Recuerdo3">
+                <img src="Recuerdo4.jpeg" alt="Recuerdo4">
+                <img src="Recuerdo5.jpeg" alt="Recuerdo5">
+                <img src="Recuerdo6.jpeg" alt="Recuerdo6">
+                <img src="Recuerdo7.jpeg" alt="Recuerdo7">
+                <img src="Recuerdo8.jpeg" alt="Recuerdo8">
+                <img src="Recuerdo9.jpeg" alt="Recuerdo9">
+                <img src="Recuerdo10.jpeg" alt="Recuerdo10">
+
+
+            </div>
+
+            <p>Disfruta tu día, ignora todo todo lo que no haga que tu día sea bonito, es tu día y te mereces lo mejor.
+            </p>
+
+            <div class="signature">¡FELICIDADES!</div>
+        </article>
+    </main>
+
+    <!-- Pie de página -->
+    <footer>
+        <p>Hecho con <span class="heart-icon">❤️</span> para el amor de mi vida, Ivannita en sus 18 años.</p>
+    </footer>
+
+    <script>
+        document.querySelector('.scroll-down').addEventListener('click', function () {
+            window.scrollTo({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            });
+        });
+    </script>
+</body>
+
+</html>
